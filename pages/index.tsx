@@ -1,18 +1,13 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import Header from './Components/Header';
+import Main from '../styles/Main.module.scss';
+import Footer from './Components/Footer';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>TopMusic</title>
-      </Head>
-      <main className={styles.main}></main>
-
-      <footer className={styles.footer}></footer>
-    </div>
+    <>
+      <main>dsdsd</main>
+    </>
   );
 };
 
