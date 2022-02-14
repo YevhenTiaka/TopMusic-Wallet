@@ -41,12 +41,27 @@
     }
     &_block {
       display: flex;
-      margin: 30px 0;
+      margin-bottom: 30px;
       height: 100%;
+      align-items: center;
+      &_container {
+        margin-left: auto;
+      }
+      &_num {
+        font-size: 100px;
+        font-weight: 700;
+        color: #fff;
+      }
+      &_tc {
+        font-size: 60px;
+        color: #fff;
+        font-weight: 700;
+      }
       &_text_u {
         font-size: 28px;
         font-weight: 700;
         color: #fff;
+        width: 260px;
       }
       &_text_b {
         font-size: 26px;

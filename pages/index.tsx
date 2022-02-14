@@ -17,9 +17,9 @@ const Home: NextPage = () => {
                   <span className={styles.main__right_block_text_u}>
                     Vous possédez dans votre cagnotte
                   </span>
-                  <div>
-                    <span>13</span>
-                    <span>Tc</span>
+                  <div className={styles.main__right_block_container}>
+                    <span className={styles.main__right_block_num}>13</span>
+                    <span className={styles.main__right_block_tc}>Tc</span>
                   </div>
                 </div>
                 <span className={styles.main__right_block_text_b}>Renouvellé le 14 octobre</span>

@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import UserMenu from './UserMenu';
-import styles from '../../styles/Header.module.scss';
-import topmusicLogo from '../../styles/images/topmusic_logo.png';
+import styles from '../styles/Header.module.scss';
+import topmusicLogo from '../styles/images/topmusic_logo.png';
 
 const Header = () => {
   const router = useRouter();
