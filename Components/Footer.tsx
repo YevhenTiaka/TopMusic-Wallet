@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { FC } from 'react';
 import styles from '../styles/Footer.module.scss';
 import footerImg from '../styles/images/footer_img.png';
 
-const Header = () => {
+const Header: FC = () => {
   const router = useRouter();
   return (
     <footer className={styles.footer}>

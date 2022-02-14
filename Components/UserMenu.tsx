@@ -1,7 +1,8 @@
 import styles from '../styles/UserMenu.module.scss';
 import Link from 'next/link';
+import { FC } from 'react';
 
-const UserMenu = () => {
+const UserMenu: FC = () => {
   return (
     <div className={styles.menu}>
       <ul className={styles.menu__container}>
