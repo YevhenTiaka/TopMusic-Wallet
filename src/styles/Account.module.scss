@@ -1,0 +1,14 @@
+.account {
+  width: 90%;
+  margin: 20px auto;
+  &__container {
+    display: flex;
+
+    &_block {
+      &_title {
+      }
+    }
+    &_inputs {
+    }
+  }
+}
