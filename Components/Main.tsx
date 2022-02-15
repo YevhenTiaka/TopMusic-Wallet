@@ -51,10 +51,13 @@ const Main: FC = () => {
           <button className={RechargeModal.modal_updateBtn}>METTRE À JOUR</button>
           <span className={RechargeModal.modal_general}>
             Pour consulter les conditions générales d'utilisations et les modalités d'annulation,
-            cliquez-ici.
+            <u>cliquez-ici</u>.
           </span>
-          <button className={RechargeModal.modal_validateBtn}>VALIDER ET PAYER</button>
-          <button className={RechargeModal.modal_annulerBtn}>ANNULER</button>
+          <div className={RechargeModal.modal__rechargeBtns}>
+            <button className={RechargeModal.modal__rechargeBtns_valider}>VALIDER ET PAYER</button>
+
+            <button className={RechargeModal.modal__rechargeBtns_annuler}>ANNULER</button>
+          </div>
         </Modal>
       )}
     </>

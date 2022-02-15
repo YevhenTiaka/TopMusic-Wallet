@@ -63,4 +63,38 @@
       }
     }
   }
+  &_updateBtn {
+    border: none;
+    background-color: #fff;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: #e85d73;
+    font-weight: 700;
+  }
+  &_general {
+    color: #5e6060;
+    opacity: 0.5;
+    font-size: 12px;
+  }
+  &__rechargeBtns {
+    display: flex;
+    flex-direction: column;
+    &_valider {
+      width: 260px;
+      height: 49px;
+      margin: auto;
+      box-shadow: 0px 2px 14px #00000029;
+      border-radius: 93px;
+      background: transparent linear-gradient(113deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+        padding-box;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      margin: 20px auto;
+    }
+  }
 }
