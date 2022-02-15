@@ -1,84 +1,63 @@
 import styles from '../styles/Main.module.scss';
+import RechargeModal from '../styles/RechargeModal.module.scss';
+import { Children, FC } from 'react';
+import WalletManage from './WalletManage';
+import WalletAmount from './WalletAmount';
+import LastTips from './LastTips';
+import Modal from './Modal';
 import { useState } from 'react';
-import { FC } from 'react';
 
 const Main: FC = () => {
   const [value, setValue] = useState(50);
+  const [modalActive, setModalActive] = useState(false);
 
   return (
-    <main className={styles.main}>
-      <section className={styles.main__container}>
-        <article className={styles.main__container_left}>
-          <h1 className={styles.main__section_title}>Gérer ma cagnotte</h1>
-          <div className={styles.main__section}>
-            <div className={styles.main__btns}>
-              <button className={styles.main__btns_item}>10Tc</button>
-              <button className={styles.main__btns_item}>20Tc</button>
-              <button className={styles.main__btns_item}>30Tc</button>
-            </div>
-            <div className={styles.main__section_btns_container}>
-              <button
-                onClick={() => setValue(value / 2)}
-                className={styles.main__section_btns_container_item}
-              >
-                -
-              </button>
-              <div className={styles.main__section_btns_container_value}>{`${value} Tc`}</div>
-              <button
-                onClick={() => setValue(value * 2)}
-                className={styles.main__section_btns_container_item}
-              >
-                +
-              </button>
-            </div>
-            <span className={styles.main__section_mounthlyRecharged}>RECHARGER MENSUELLEMENT</span>
-            <div className={styles.main__btns}>
-              <button className={styles.main__btns_item}>30Tc</button>
-              <button className={styles.main__btns_item}>50Tc</button>
-              <button className={styles.main__btns_item}>100Tc</button>
-            </div>
-            <span className={styles.main__section_punctuallyRecharged}>
-              RECHARGER PONCTUELLEMENT
-            </span>
-            <span className={styles.main__section_usageText}>
-              Utilisables jusqu'au 14 octobre 2021
-            </span>
-            <span className={styles.main__section_chargeCagnotte}>
-              MODIFIER LE MONTANT DE MA CAGNOTTE
-            </span>
-          </div>
-        </article>
-        <section className={styles.main__right}>
-          <article className={styles.main__right_upper}>
-            <div className={styles.main__section}>
-              <div className={styles.main__right_block}>
-                <span className={styles.main__right_block_text_u}>
-                  Vous possédez dans votre cagnotte
-                </span>
-                <div className={styles.main__right_block_container}>
-                  <span className={styles.main__right_block_num}>13</span>
-                  <span className={styles.main__right_block_tc}>Tc</span>
-                </div>
-              </div>
-              <span className={styles.main__right_block_text_b}>Renouvellé le 14 octobre</span>
-            </div>
-          </article>
-          <article className={styles.main__right_bottom}>
-            <h1>Mes derniers Tips</h1>
-            <div className={styles.main__section}>
-              <div>
-                <div></div>
-                <ul>
-                  <li>Tendry</li>
-                  <li>Il y a 10 minutes</li>
-                </ul>
-                <span>10Tc</span>
-              </div>
-            </div>
-          </article>
+    <>
+      <main className={styles.main}>
+        <section className={styles.main__container}>
+          <WalletManage setModalActive={setModalActive} value={value} setValue={setValue} />
+          <section className={styles.main__right}>
+            <WalletAmount />
+            <LastTips />
+          </section>
         </section>
-      </section>
-    </main>
+      </main>
+      {modalActive && (
+        <Modal className={RechargeModal.modal} setModalActive={setModalActive}>
+          <h1 className={RechargeModal.modal_title}>Résumé de ma recharge</h1>
+          <div className={RechargeModal.modal__block}>
+            <div className={RechargeModal.modal__block_wallet}>
+              <div className={RechargeModal.modal__block_wallet_container}>
+                <div className={RechargeModal.modal__block_wallet_container_textU}>
+                  Votre recharge ponctuelle
+                </div>
+                <div>Vous serez débité de 5€ immédiatement.</div>
+              </div>
+              <div className={RechargeModal.modal__block_wallet_tc}>50Tc</div>
+            </div>
+
+            <div className={RechargeModal.modal__block_textB}>
+              Les 50Tc sont utlisables jusqu'au 14/10.
+            </div>
+          </div>
+          <span className={RechargeModal.modal_text}>Votre carte de paiement</span>
+          <div className={RechargeModal.modal__card}>
+            <div className={RechargeModal.modal__card_img}></div>
+            <ul className={RechargeModal.modal__card_list}>
+              <li className={RechargeModal.modal__card_list_item}>Carte Visa terminant par 4242</li>
+              <li className={RechargeModal.modal__card_list_item_exp}>Expire le 12/24</li>
+            </ul>
+          </div>
+          <button className={RechargeModal.modal_updateBtn}>METTRE À JOUR</button>
+          <span className={RechargeModal.modal_general}>
+            Pour consulter les conditions générales d'utilisations et les modalités d'annulation,
+            cliquez-ici.
+          </span>
+          <button className={RechargeModal.modal_validateBtn}>VALIDER ET PAYER</button>
+          <button className={RechargeModal.modal_annulerBtn}>ANNULER</button>
+        </Modal>
+      )}
+    </>
   );
 };
 

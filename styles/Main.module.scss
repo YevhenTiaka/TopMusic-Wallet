@@ -1,4 +1,5 @@
 .main {
+  height: 1080px;
   &__container {
     width: 70%;
     margin: 0 auto;
@@ -35,7 +36,16 @@
     align-items: center;
     padding: 30px;
     height: 100%;
-
+    &_right {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      height: 100%;
+    }
+    &__wrapper {
+      height: 280px;
+      overflow: scroll;
+    }
     &_title {
       font-size: 28px;
       text-indent: 15px;
@@ -74,6 +84,8 @@
       color: #e85d73;
       text-transform: uppercase;
       margin: 10px 0px 90px 0px;
+      border: none;
+      background-color: #fff;
     }
     &_punctuallyRecharged {
       font: normal normal bold 15px/19px Sen;
@@ -93,6 +105,11 @@
       color: #e85d73;
       text-transform: uppercase;
     }
+    &_tips {
+      &_title {
+        padding: 30px 0px 0px 30px;
+      }
+    }
   }
 
   &__right {
@@ -108,11 +125,20 @@
       box-shadow: 0px 14px 22px #0000001a;
     }
     &_bottom {
-      height: 446px;
+      height: 464px;
       width: 100%;
       margin-top: 50px;
       border-radius: 5px;
-      box-shadow: 0px 14px 22px #0000001a;
+      box-shadow: 0px -2px 22px #0000001a;
+      &_more {
+        display: flex;
+        justify-content: center;
+        color: #e85d73;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 700;
+        margin-top: 20px;
+      }
     }
     &_block {
       display: flex;
@@ -145,5 +171,47 @@
         margin-bottom: 30px;
       }
     }
+  }
+}
+.tips__container {
+  display: flex;
+  flex-direction: column;
+  height: 265px;
+  overflow: scroll;
+  &_content {
+    display: flex;
+    align-items: center;
+  }
+  &_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 0px 10px 0px 30px;
+  }
+  &_list {
+    list-style: none;
+    padding-left: 0;
+    &_name {
+      font-size: 18px;
+      color: #191c1c;
+      font-weight: 700;
+    }
+    &_when {
+      font-size: 13px;
+      color: #868686;
+    }
+  }
+  &_amount {
+    font-size: 18px;
+    color: #e85d73;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  &_underline {
+    width: 90%;
+    color: #707070;
+    opacity: 0.12;
   }
 }
