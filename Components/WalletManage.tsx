@@ -1,8 +1,13 @@
 import styles from '../styles/Main.module.scss';
+import RechargeModalStyles from '../styles/RechargeModal.module.scss';
+import RechargeModal from '../Components/RechargeModal';
 import { FC, useState } from 'react';
 import Modal from './Modal';
 
-const WalletManage: FC = ({ value, setValue, setModalActive }: any) => {
+const WalletManage: FC = () => {
+  const [modalActive, setModalActive] = useState(false);
+  const [value, setValue] = useState(50);
+
   return (
     <>
       <article className={styles.main__container_left}>
@@ -48,6 +53,11 @@ const WalletManage: FC = ({ value, setValue, setModalActive }: any) => {
           </span>
         </div>
       </article>
+      {modalActive && (
+        <Modal className={RechargeModalStyles.modal} setModalActive={setModalActive}>
+          <RechargeModal />
+        </Modal>
+      )}
     </>
   );
 };
