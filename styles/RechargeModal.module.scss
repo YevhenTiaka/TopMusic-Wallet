@@ -96,5 +96,15 @@
       cursor: pointer;
       margin: 20px auto;
     }
+    &_annuler {
+      border: none;
+      color: #62768d;
+      font-size: 16px;
+      background-color: transparent;
+      width: 266px;
+      margin: 20px auto;
+
+      cursor: pointer;
+    }
   }
 }
