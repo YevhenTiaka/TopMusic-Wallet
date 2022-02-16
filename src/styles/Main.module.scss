@@ -86,6 +86,7 @@
       margin: 10px 0px 90px 0px;
       border: none;
       background-color: #fff;
+      cursor: pointer;
     }
     &_punctuallyRecharged {
       font: normal normal bold 15px/19px Sen;
@@ -101,7 +102,6 @@
     }
     &_chargeCagnotte {
       font: normal normal bold 15px/19px Sen;
-
       color: #e85d73;
       text-transform: uppercase;
     }
@@ -118,7 +118,7 @@
 
     &_upper {
       height: 251px;
-      width: 100%;
+
       border-radius: 5px;
       background: transparent linear-gradient(100deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
         padding-box;

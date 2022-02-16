@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { FC } from 'react';
 import styles from '../styles/Footer.module.scss';
 import footerImg from '../styles/images/footer_img.png';
 
 const Footer: FC = () => {
-  const router = useRouter();
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__line} />

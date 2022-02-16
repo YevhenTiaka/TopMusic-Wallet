@@ -1,10 +1,14 @@
 .account {
-  width: 90%;
+  width: 85%;
   margin: 20px auto;
   &__container {
     display: flex;
 
     &_block {
+      width: 60%;
+      box-shadow: 0px 3px 14px #0000001c;
+      border-radius: 10px;
+      margin-right: 40px;
       &_title {
       }
     }

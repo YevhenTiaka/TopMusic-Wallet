@@ -1,8 +1,8 @@
-import styles from '../styles/Main.module.scss';
-import RechargeModalStyles from '../styles/RechargeModal.module.scss';
-import RechargeModal from '../Components/RechargeModal';
 import { FC, useState } from 'react';
-import Modal from './Modal';
+import Link from 'next/link';
+import styles from '../styles/Main.module.scss';
+import RechargeModal from './rechargeModal';
+import Modal from './modal';
 
 const WalletManage: FC = () => {
   const [modalActive, setModalActive] = useState(false);
@@ -48,13 +48,15 @@ const WalletManage: FC = () => {
           <span className={styles.main__section_usageText}>
             Utilisables jusqu'au 14 octobre 2021
           </span>
-          <span className={styles.main__section_chargeCagnotte}>
-            MODIFIER LE MONTANT DE MA CAGNOTTE
-          </span>
+          <Link href="/cagnotte">
+            <a className={styles.main__section_chargeCagnotte}>
+              MODIFIER LE MONTANT DE MA CAGNOTTE
+            </a>
+          </Link>
         </div>
       </article>
       {modalActive && (
-        <Modal className={RechargeModalStyles.modal} setModalActive={setModalActive}>
+        <Modal setModalActive={setModalActive}>
           <RechargeModal />
         </Modal>
       )}
