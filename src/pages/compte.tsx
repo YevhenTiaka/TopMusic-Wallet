@@ -1,17 +1,16 @@
-import WalletAmount from '../src/сomponents/walletAmount';
-import styles from '../src/styles/Account.module.scss';
+import WalletAmount from '../сomponents/walletAmount';
+import styles from '../styles/Account.module.scss';
+
 const Compte = () => {
   return (
     <>
       <section className={styles.account}>
         <div className={styles.account__container}>
           <div className={styles.account__container_block}>
-            <h1 className="text-3xl font-bold color:white underline">
-              Mes informations personnelles
-            </h1>
+            <h1 className="">Mes informations personnelles</h1>
             <div className={styles.account__container_inputs}>
               <div>
-                <input type="text" name="" id="" />
+                <input className=" bg-red-600 " type="text" name="" id="" />
                 <input type="text" name="" id="" />
                 <label htmlFor="">Homme</label>
                 <input type="radio" name="" id="" />
