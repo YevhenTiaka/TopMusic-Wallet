@@ -1,4 +1,4 @@
-import styles from '../styles/RechargeModal.module.scss';
+import styles from 'styles/RechargeModal.module.scss';
 import { FC } from 'react';
 
 const RechargeModal: FC = () => {

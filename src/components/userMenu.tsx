@@ -1,4 +1,4 @@
-import styles from '../styles/UserMenu.module.scss';
+import styles from 'styles/UserMenu.module.scss';
 import Link from 'next/link';
 import { FC } from 'react';
 

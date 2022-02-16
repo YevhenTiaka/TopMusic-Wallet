@@ -1,7 +1,7 @@
-import styles from '../src/styles/Main.module.scss';
-import WalletManage from '../src/сomponents/walletManage';
-import WalletAmount from '../src/сomponents/walletAmount';
-import LastTips from '../src/сomponents/lastTips';
+import styles from 'styles/Main.module.scss';
+import WalletManage from 'components/walletManage';
+import WalletAmount from 'components/walletAmount';
+import LastTips from 'components/lastTips';
 import { FC } from 'react';
 
 const Cagnotte: FC = () => {

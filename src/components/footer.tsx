@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
-import styles from '../styles/Footer.module.scss';
-import footerImg from '../styles/images/footer_img.png';
+import styles from 'styles/Footer.module.scss';
+import footerImg from 'styles/images/footer_img.png';
 
 const Footer: FC = () => {
   return (

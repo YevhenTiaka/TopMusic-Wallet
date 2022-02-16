@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from '../styles/Modal.module.scss';
+import styles from 'styles/Modal.module.scss';
 
 const Modal: FC = ({ setModalActive, children }: any) => {
   return (

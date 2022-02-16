@@ -1,5 +1,5 @@
-import WalletAmount from '../src/сomponents/walletAmount';
-import styles from '../src/styles/Account.module.scss';
+import WalletAmount from 'components/walletAmount';
+import styles from 'styles/Account.module.scss';
 const Compte = () => {
   return (
     <>

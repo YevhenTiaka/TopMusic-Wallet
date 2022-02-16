@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Main.module.scss';
+import styles from 'styles/Main.module.scss';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
 

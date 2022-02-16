@@ -1,4 +1,4 @@
-import styles from '../styles/Main.module.scss';
+import styles from 'styles/Main.module.scss';
 import { FC } from 'react';
 
 const WalletAmount: FC = () => {
