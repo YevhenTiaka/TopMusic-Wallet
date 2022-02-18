@@ -1,7 +1,7 @@
 .main {
   height: 1080px;
   &__container {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     height: 100vh;
     display: flex;
@@ -16,15 +16,27 @@
   &__btns {
     margin-bottom: 20px;
     &_item {
-      cursor: pointer;
-      border: 1px solid #ff870e;
-      color: #ff870e;
-      font-weight: 700;
-      width: 124px;
-      height: 46px;
-      border-radius: 23px;
-      margin-right: 15px;
-
+      &_active {
+        background-color: #ff870e;
+        cursor: pointer;
+        border: 1px solid #ff870e;
+        color: #fff;
+        font-weight: 700;
+        width: 124px;
+        height: 46px;
+        border-radius: 23px;
+        margin-right: 15px;
+      }
+      &_disabled {
+        cursor: pointer;
+        border: 1px solid #ff870e;
+        color: #ff870e;
+        font-weight: 700;
+        width: 124px;
+        height: 46px;
+        border-radius: 23px;
+        margin-right: 15px;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -58,7 +70,7 @@
       display: flex;
       align-items: center;
       &_value {
-        width: 141px;
+        width: 150px;
         height: 46px;
         display: flex;
         align-items: center;
@@ -68,7 +80,7 @@
         color: #fff;
         font-weight: 700;
         border-radius: 26px;
-        margin: 0 10px 10px;
+        margin-right: 10px;
       }
       &_item {
         cursor: pointer;
@@ -76,6 +88,8 @@
         height: 38px;
         border-radius: 50%;
         border: 2px solid #62768d;
+        margin-right: 20px;
+        margin-left: 20px;
       }
     }
     &_mounthlyRecharged {

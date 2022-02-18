@@ -1,19 +1,23 @@
 import styles from 'styles/RechargeModal.module.scss';
 import { FC } from 'react';
+import Buttons from './buttons';
 
-const RechargeModal: FC = () => {
+const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
   return (
     <>
       <h1 className={styles.modal_title}>Résumé de ma recharge</h1>
       <div className={styles.modal__block}>
         <div className={styles.modal__block_wallet}>
           <div className={styles.modal__block_wallet_container}>
-            <div className={styles.modal__block_wallet_container_textU}>
-              Votre recharge ponctuelle
+            <div className={styles.modal__block_wallet_container_textU}>{children}</div>
+            <div
+              className="w-3/4
+            "
+            >
+              Vous serez débité de 5€ immédiatement.
             </div>
-            <div>Vous serez débité de 5€ immédiatement.</div>
           </div>
-          <div className={styles.modal__block_wallet_tc}>50Tc</div>
+          <div className={styles.modal__block_wallet_tc}>{value}Tc</div>
         </div>
 
         <div className={styles.modal__block_textB}>Les 50Tc sont utlisables jusqu'au 14/10.</div>
@@ -31,11 +35,7 @@ const RechargeModal: FC = () => {
         Pour consulter les conditions générales d'utilisations et les modalités d'annulation,
         <u>cliquez-ici</u>.
       </span>
-      <div className={styles.modal__rechargeBtns}>
-        <button className={styles.modal__rechargeBtns_valider}>VALIDER ET PAYER</button>
-
-        <button className={styles.modal__rechargeBtns_annuler}>ANNULER</button>
-      </div>
+      <Buttons closeHandler={closeHandler} />
     </>
   );
 };

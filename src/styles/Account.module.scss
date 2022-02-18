@@ -15,4 +15,27 @@
     &_inputs {
     }
   }
+  &__input {
+    &_date {
+      outline: none;
+      border-bottom: 1px solid #efefef;
+      margin-bottom: 10px;
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+  }
+  &__registrBtn {
+    width: 369px;
+    height: 49px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+
+    background: linear-gradient(107deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 14px #00000029;
+    border-radius: 93px;
+    opacity: 0.7;
+  }
 }

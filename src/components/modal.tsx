@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import styles from 'styles/Modal.module.scss';
 
-const Modal: FC = ({ setModalActive, children }: any) => {
+const Modal: FC = ({ closeHandler, children }: any) => {
   return (
-    <section className={styles.modal} onClick={() => setModalActive(false)}>
+    <section className={styles.modal} onClick={() => closeHandler(false)}>
       <div className={styles.modal__container} onClick={(e) => e.stopPropagation()}>
         {children}
       </div>

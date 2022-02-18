@@ -22,16 +22,26 @@ const Header: FC = () => {
               </a>
             </Link>
           </div>
-          <ul className={styles.header__nav}>
-            <li
-              className={
-                router.pathname === '/cagnotte'
-                  ? `${styles.header__nav_active}`
-                  : `${styles.header__nav_disabled}`
-              }
-            >
-              <Link href="/cagnotte">Ma cagnotte</Link>
-            </li>
+          <ul
+            className={
+              router.pathname === '/freemium'
+                ? `${styles.header__nav_freemium}`
+                : `${styles.header__nav}`
+            }
+          >
+            {router.pathname !== '/freemium' ? (
+              <li
+                className={
+                  router.pathname === '/cagnotte'
+                    ? `${styles.header__nav_active}`
+                    : `${styles.header__nav_disabled}`
+                }
+              >
+                <Link href="/cagnotte">
+                  <a>Ma cagnotte</a>
+                </Link>
+              </li>
+            ) : null}
             <li
               className={
                 router.pathname === '/compte'
@@ -39,7 +49,15 @@ const Header: FC = () => {
                   : `${styles.header__nav_disabled}`
               }
             >
-              <Link href="/compte">Mon compte</Link>
+              <Link href="/compte">
+                <a
+                  className={
+                    router.pathname === '/freemium' ? `${styles.header__nav_active}` : null
+                  }
+                >
+                  Mon compte
+                </a>
+              </Link>
             </li>
           </ul>
 
