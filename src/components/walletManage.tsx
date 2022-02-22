@@ -3,22 +3,11 @@ import Link from 'next/link';
 import styles from 'styles/Main.module.scss';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
-
-const DEFAULTVALUE = {
-  first: false,
-  second: false,
-  third: false,
-  fourth: false,
-  fifth: false,
-  sixth: false
-};
-
-const ZERO = 0;
-const CHANGEVALUE = 5;
+import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
 
 const WalletManage: FC = () => {
-  const [mensuellement, setMensuellement] = useState(false);
-  const [ponctuellement, setPonctuellement] = useState(false);
+  const [mensuellement, setMensuellement] = useState<Boolean>(false);
+  const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
 
   const [value, setValue] = useState(0);
 
@@ -31,7 +20,7 @@ const WalletManage: FC = () => {
     sixth: false
   });
 
-  const handleClick = (activeButton: object, value: number) => {
+  const handleClick = (activeButton: any, value: any) => {
     return;
   };
 
@@ -42,7 +31,9 @@ const WalletManage: FC = () => {
         <div className={styles.main__section}>
           <div className={styles.main__btns}>
             <button
-              onClick={() => handleClick(setActive({ ...DEFAULTVALUE, first: true }), setValue(10))}
+              onClick={() =>
+                handleClick(setActive({ ...DEFAULT_VALUE, first: true }), setValue(10))
+              }
               className={
                 activeButton.first
                   ? `${styles.main__btns_item_active}`
@@ -53,7 +44,7 @@ const WalletManage: FC = () => {
             </button>
             <button
               onClick={() =>
-                handleClick(setActive({ ...DEFAULTVALUE, second: true }), setValue(20))
+                handleClick(setActive({ ...DEFAULT_VALUE, second: true }), setValue(20))
               }
               className={
                 activeButton.second
@@ -64,7 +55,9 @@ const WalletManage: FC = () => {
               20Tc
             </button>
             <button
-              onClick={() => handleClick(setActive({ ...DEFAULTVALUE, third: true }), setValue(30))}
+              onClick={() =>
+                handleClick(setActive({ ...DEFAULT_VALUE, third: true }), setValue(30))
+              }
               className={
                 activeButton.third
                   ? `${styles.main__btns_item_active}`
@@ -77,14 +70,14 @@ const WalletManage: FC = () => {
           <div className={styles.main__section_btns_container}>
             <button
               disabled={value <= ZERO}
-              onClick={() => setValue(value - CHANGEVALUE)}
+              onClick={() => setValue(value - CHANGE_VALUE)}
               className={styles.main__section_btns_container_item}
             >
               -
             </button>
             <div className={styles.main__section_btns_container_value}>{`${value} Tc`}</div>
             <button
-              onClick={() => setValue(value + CHANGEVALUE)}
+              onClick={() => setValue(value + CHANGE_VALUE)}
               className={styles.main__section_btns_container_item}
             >
               +
@@ -99,7 +92,7 @@ const WalletManage: FC = () => {
           <div className={styles.main__btns}>
             <button
               onClick={() =>
-                handleClick(setActive({ ...DEFAULTVALUE, fourth: true }), setValue(30))
+                handleClick(setActive({ ...DEFAULT_VALUE, fourth: true }), setValue(30))
               }
               className={
                 activeButton.fourth
@@ -110,7 +103,9 @@ const WalletManage: FC = () => {
               30Tc
             </button>
             <button
-              onClick={() => handleClick(setActive({ ...DEFAULTVALUE, fifth: true }), setValue(50))}
+              onClick={() =>
+                handleClick(setActive({ ...DEFAULT_VALUE, fifth: true }), setValue(50))
+              }
               className={
                 activeButton.fifth
                   ? `${styles.main__btns_item_active}`
@@ -121,7 +116,7 @@ const WalletManage: FC = () => {
             </button>
             <button
               onClick={() =>
-                handleClick(setActive({ ...DEFAULTVALUE, sixth: true }), setValue(100))
+                handleClick(setActive({ ...DEFAULT_VALUE, sixth: true }), setValue(100))
               }
               className={
                 activeButton.sixth

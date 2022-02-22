@@ -9,7 +9,7 @@ import topmusicLogo from 'styles/images/topmusic_logo.png';
 
 const Header: FC = () => {
   const router = useRouter();
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState<Boolean>(false);
 
   return (
     <>

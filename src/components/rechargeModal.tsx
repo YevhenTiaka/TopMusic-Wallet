@@ -1,6 +1,6 @@
 import styles from 'styles/RechargeModal.module.scss';
 import { FC } from 'react';
-import Buttons from './buttons';
+import Link from 'next/link';
 
 const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
   return (
@@ -9,18 +9,22 @@ const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
       <div className={styles.modal__block}>
         <div className={styles.modal__block_wallet}>
           <div className={styles.modal__block_wallet_container}>
-            <div className={styles.modal__block_wallet_container_textU}>{children}</div>
+            <div className={styles.modal__block_wallet_container_textU}>
+              Votre recharge {children}
+            </div>
             <div
               className="w-3/4
             "
             >
-              Vous serez débité de 5€ immédiatement.
+              Vous serez débité de {value / 10}€ immédiatement.
             </div>
           </div>
           <div className={styles.modal__block_wallet_tc}>{value}Tc</div>
         </div>
 
-        <div className={styles.modal__block_textB}>Les 50Tc sont utlisables jusqu'au 14/10.</div>
+        <div className={styles.modal__block_textB}>
+          Les {value}Tc sont utlisables jusqu'au 14/10.
+        </div>
       </div>
       <span className={styles.modal_text}>Votre carte de paiement</span>
       <div className={styles.modal__card}>
@@ -35,7 +39,17 @@ const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
         Pour consulter les conditions générales d'utilisations et les modalités d'annulation,
         <u>cliquez-ici</u>.
       </span>
-      <Buttons closeHandler={closeHandler} />
+      <div className={styles.modal__rechargeBtns}>
+        <Link href="/cagnotte">
+          <a onClick={() => closeHandler(false)} className={styles.modal__rechargeBtns_valider}>
+            VALIDER ET PAYER
+          </a>
+        </Link>
+
+        <button onClick={() => closeHandler()} className={styles.modal__rechargeBtns_annuler}>
+          ANNULER
+        </button>
+      </div>
     </>
   );
 };

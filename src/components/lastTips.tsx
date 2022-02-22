@@ -1,54 +1,26 @@
 import styles from 'styles/Main.module.scss';
+import Link from 'next/link';
 import { FC } from 'react';
 
 const LastTips: FC = () => {
   return (
-    <article className={styles.main__right_bottom}>
-      <div className={styles.main__section_tips}>
-        <h1 className={styles.main__section_tips_title}>Mes derniers Tips</h1>
-        <div className={styles.tips__container}>
-          <div className={styles.tips__container_content}>
-            <div className={styles.tips__container_img}></div>
-            <ul className={styles.tips__container_list}>
-              <li className={styles.tips__container_list_name}>Tendry</li>
-              <li className={styles.tips__container_list_when}>Il y a 10 minutes</li>
+    <article className="lastTips__section">
+      <div className="pb-8">
+        <h1 className="pt-6 pl-6 font-bold text-xl mb-8">Mes derniers Tips</h1>
+        <div className="receipt__list_block">
+          <div className="flex items-center">
+            <div className="receipt__list_img"></div>
+            <ul>
+              <li className="font-bold">Tendry</li>
+              <li className="text-base decoration-gray-300">Il y a 10 minutes</li>
             </ul>
-            <span className={styles.tips__container_amount}>10Tc</span>
           </div>
-          <div className={styles.tips__container_content}>
-            <div className={styles.tips__container_img}></div>
-            <ul className={styles.tips__container_list}>
-              <li className={styles.tips__container_list_name}>Tendry</li>
-              <li className={styles.tips__container_list_when}>Il y a 10 minutes</li>
-            </ul>
-            <span className={styles.tips__container_amount}>10Tc</span>
-          </div>
-          <div className={styles.tips__container_content}>
-            <div className={styles.tips__container_img}></div>
-            <ul className={styles.tips__container_list}>
-              <li className={styles.tips__container_list_name}>Tendry</li>
-              <li className={styles.tips__container_list_when}>Il y a 10 minutes</li>
-            </ul>
-            <span className={styles.tips__container_amount}>10Tc</span>
-          </div>
-          <div className={styles.tips__container_content}>
-            <div className={styles.tips__container_img}></div>
-            <ul className={styles.tips__container_list}>
-              <li className={styles.tips__container_list_name}>Tendry</li>
-              <li className={styles.tips__container_list_when}>Il y a 10 minutes</li>
-            </ul>
-            <span className={styles.tips__container_amount}>10Tc</span>
-          </div>
-          <div className={styles.tips__container_content}>
-            <div className={styles.tips__container_img}></div>
-            <ul className={styles.tips__container_list}>
-              <li className={styles.tips__container_list_name}>Tendry</li>
-              <li className={styles.tips__container_list_when}>Il y a 10 minutes</li>
-            </ul>
-            <span className={styles.tips__container_amount}>10Tc</span>
-          </div>
+
+          <div className="receipt__list_amount">10Tc</div>
         </div>
-        <div className={styles.main__right_bottom_more}>VOIR PLUS</div>
+        <Link href="/receipt-list">
+          <a className={styles.main__right_bottom_more}>VOIR PLUS</a>
+        </Link>
       </div>
     </article>
   );

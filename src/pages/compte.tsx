@@ -1,71 +1,34 @@
-import WalletAmount from 'components/walletAmount';
-import styles from 'styles/Account.module.scss';
+import Personal from 'components/personal';
 import { FC } from 'react';
+import Abonement from 'components/abonement';
+import WalletAmount from 'components/walletAmount';
+import Modifier from 'components/modifier';
+import Notification from 'components/notification';
+
 const Compte: FC = () => {
   return (
     <>
-      <section className="flex justify-center mt-20 ">
-        <div className="flex ">
-          <div className="w-4/7 mr-10 shadow-lg rounded-md">
-            <h1 className="font-bold text-xl pl-6 pt-6 pb-6">Mes informations personnelles</h1>
-            <div className="flex justify-between  ">
-              <div className=" flex flex-col ml-6 ">
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  PRENOM
-                </label>
-                <input
-                  className="w-96 border-b-[1px] outline-none mb-5"
-                  type="text"
-                  name=""
-                  id=""
-                />
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  NOM
-                </label>
-                <input
-                  className="w-96 border-b-[1px] outline-none mb-5"
-                  type="text"
-                  name=""
-                  id=""
-                />
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  SEXE
-                </label>
-                <div>
-                  <label htmlFor="">Homme</label>
-                  <input type="radio" name="" id="" />
-                  <label htmlFor="">Femme</label>
-                  <input type="radio" name="" id="" />
+      <section className="flex flex-row justify-center mt-20  w-3/4 m-auto ">
+        <div className="">
+          <Personal />
+          <Modifier />
+          <Abonement>
+            <Notification>Vos données ont été mises à jour.</Notification>
+            <div className="flex flex-col">
+              <div className="">
+                <div className="text-base">
+                  Vous avez un <strong>Compte Gratuit sans cagnotte.</strong>
+                </div>
+                <div className="text-base">
+                  En plus de profiter de toutes les fonctionnalités premium, vous soutenez les
+                  artistes par vos tips.
                 </div>
               </div>
-              <div className="flex flex-col pr-6 ml-6">
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  ADRESSE EMAIL
-                </label>
-                <input className="w-96 border-b-[1px] outline-none mb-5" type="text" />
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  DATE DE NAISSANCE
-                </label>
-                <input className={styles.account__input_date} type="date" />
-                <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
-                  PAYS DE RÉSIDENCE
-                </label>
-                <input className="w-96 border-b-[1px] outline-none mb-5" type="text" />
-              </div>
+              <span className="button__modifier">MODIFIER MON ABONNEMENT</span>
             </div>
-            <div className="flex justify-end mt-10 mb-10 mr-5">
-              <button className={styles.account__registrBtn}>ENREGISTRER LES MODIFICATIONS</button>
-            </div>
-          </div>
-          <WalletAmount />
+          </Abonement>
         </div>
-      </section>
-      <section className="flex h-auto">
-        <div className="flex ">
-          <div className=" bg-black w-40 h-40"></div>
-          <div className=" bg-black w-40 h-40"></div>
-        </div>
-        <div></div>
+        <WalletAmount />
       </section>
     </>
   );

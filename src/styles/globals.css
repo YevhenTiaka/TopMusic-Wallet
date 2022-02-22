@@ -84,3 +84,210 @@ a {
   font-weight: bold;
   margin: 0 25px;
 }
+
+.notification {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 40px;
+  top: 130px;
+  width: 344px;
+  height: 94px;
+  background: transparent linear-gradient(105deg, #009dc5 0%, #21e590 100%) 0% 0% no-repeat
+    padding-box;
+  box-shadow: 0px 0px 50px #0000001a;
+  border-radius: 5px;
+  opacity: 1;
+  color: #fff;
+  font-weight: 700;
+}
+.notification__block {
+  display: flex;
+  align-items: center;
+}
+.fa-circle-check {
+  margin-left: 35px;
+  margin-right: 18px;
+  font-size: 36px;
+}
+
+.receipt__main {
+  height: 100vh;
+  margin-top: 130px;
+}
+.receipt__list_section {
+  width: 52%;
+  margin: auto;
+  height: auto;
+  box-shadow: 0px 3px 14px #0000001c;
+  border-radius: 5px;
+}
+.receipt__list_block {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.125);
+  margin: 0 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.receipt__list_amount {
+  display: flex;
+  align-items: center;
+  color: #e85d73;
+  font-weight: bold;
+}
+.receipt__list_img {
+  width: 50px;
+  height: 50px;
+  background: aqua;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.lastTips__section {
+  height: auto;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 0px -2px 22px #0000001a;
+}
+
+.retour {
+  position: fixed;
+  top: 145px;
+  left: 140px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.personal {
+  margin-right: 50px;
+  box-shadow: 0px 3px 14px #0000001c;
+  border-radius: 5px;
+}
+
+.active {
+  width: 88px;
+  height: 35px;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 20px;
+  border: 1px solid var(--unnamed-color-ff870e);
+  background: #ff870e 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 14px #00000029;
+  border: 1px solid #ff870e;
+  border-radius: 23px;
+}
+.disabled {
+  width: 88px;
+  height: 35px;
+  color: #ff870e;
+  margin-right: 20px;
+  font-weight: 700;
+  border: 1px solid var(--unnamed-color-ff870e);
+  box-shadow: 0px 2px 14px #00000029;
+  border: 1px solid #ff870e;
+  border-radius: 23px;
+}
+.modifier {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 840px;
+  margin-bottom: 40px;
+}
+.modifier__passe {
+  width: 45%;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0px 3px 14px #0000001c;
+  border-radius: 5px;
+}
+
+.new__password_btn {
+  width: 286px;
+  height: 38px;
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+  background: transparent linear-gradient(107deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 93px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 0.5;
+  font-size: 13px;
+}
+.paiement__item_carte {
+  color: #e85d73;
+  font-weight: 700;
+  font-size: 14px;
+}
+.paiement__item_visa {
+  color: #62768d;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.paiement {
+  margin-bottom: 14px;
+}
+.paiement__item_expiration {
+  color: #62768d;
+  font-size: 10px;
+}
+.paiement__historique {
+  color: #e85d73;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.abonement {
+  width: 840px;
+  height: auto;
+  box-shadow: 0px 2px 14px #00000029;
+  padding: 25px;
+  margin-bottom: 40px;
+}
+.button__modifier {
+  color: #e85d73;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px 0 20px auto;
+}
+.update__btn {
+  width: 261px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 93px;
+  background: transparent linear-gradient(113deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  color: #fff;
+  font-weight: 700;
+  margin: 20px;
+}
+.card__img {
+  margin-right: 16px;
+  background-image: url('./images/visa_img.png');
+  background-size: contain;
+  width: 37px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+.date__input {
+  border-bottom: 2px solid #efefef;
+  outline: none;
+  text-indent: 2px;
+}
+.date__input::-webkit-calendar-picker-indicator {
+  display: none;
+}

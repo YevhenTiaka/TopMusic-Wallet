@@ -83,6 +83,9 @@
     display: flex;
     flex-direction: column;
     &_valider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 260px;
       height: 49px;
       margin: auto;
