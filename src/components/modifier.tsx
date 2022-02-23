@@ -1,10 +1,19 @@
 import Link from 'next/link';
 import { FC, useState } from 'react';
 import Modal from './modal';
+import Notification from './notification';
 
 const Modifier: FC = () => {
   const [modal, setModal] = useState<Boolean>(false);
+  const [show, setShow] = useState(false);
 
+  const handleUpdated = () => {
+    setModal(false);
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 3000);
+  };
   return (
     <>
       <div className="modifier">
@@ -23,7 +32,9 @@ const Modifier: FC = () => {
               <input className="border-b-2 outline-none" type="password" />
             </div>
 
-            <button className="new__password_btn">DÉFINIR UN NOUVEAU MOT DE PASSE</button>
+            <button onClick={handleUpdated} className="new__password_btn">
+              DÉFINIR UN NOUVEAU MOT DE PASSE
+            </button>
           </div>
           <div className="modifier__passe">
             <h1 className="font-bold text-2xl mb-6">Moyen de paiement</h1>
@@ -46,7 +57,10 @@ const Modifier: FC = () => {
               Votre prochaine facture sera de <strong>15€.</strong> Elle sera prélevée le{' '}
               <strong>14/10/2021</strong>.
             </div>
-            <div className="paiement__historique">HISTORIQUE DE PAIEMENT</div>
+
+            <Link href="/receipt-history">
+              <a className="paiement__historique">HISTORIQUE DE PAIEMENT</a>
+            </Link>
           </div>
         </div>
       </div>
@@ -78,21 +92,23 @@ const Modifier: FC = () => {
                   <label className="text-xs opacity-50" htmlFor="">
                     CVV
                   </label>
-                  <input type="text" className="border-b-2 outline-none w-28" />
+                  <input
+                    type="text"
+                    className="border-b-2 outline-none w-28 opacity-70 font-bold"
+                  />
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <Link href="/compte">
-                <a onClick={() => setModal(false)} className="update__btn">
-                  METTRE À JOUR
-                </a>
-              </Link>
+              <button onClick={handleUpdated} className="update__btn">
+                METTRE À JOUR
+              </button>
               <button onClick={() => setModal(false)}>ANNULER</button>
             </div>
           </section>
         </Modal>
       )}
+      {show && <Notification>Vos données ont été mises à jour.</Notification>}
     </>
   );
 };
