@@ -1,12 +1,20 @@
 import styles from 'styles/Account.module.scss';
 import { FC, useState } from 'react';
-
+import Notification from './notification';
 const Personal: FC = () => {
+  const [show, setShow] = useState(false);
+
   const [gender, setGender] = useState({
     femme: false,
     homme: false
   });
 
+  const handleUpdated = () => {
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 3000);
+  };
   return (
     <div className="flex ">
       <div className="personal">
@@ -56,9 +64,12 @@ const Personal: FC = () => {
           </div>
         </div>
         <div className="flex justify-end mt-10 mb-10 mr-5">
-          <button className={styles.account__registrBtn}>ENREGISTRER LES MODIFICATIONS</button>
+          <button onClick={handleUpdated} className={styles.account__registrBtn}>
+            ENREGISTRER LES MODIFICATIONS
+          </button>
         </div>
       </div>
+      {show && <Notification>Votre mot de passe a été modifié avec succès.</Notification>}
     </div>
   );
 };
