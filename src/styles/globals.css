@@ -239,10 +239,11 @@ a {
   font-size: 10px;
 }
 .paiement__historique {
+  display: flex;
+  justify-content: flex-end;
   color: #e85d73;
   font-size: 16px;
   font-weight: 700;
-  text-align: right;
   margin-top: 20px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -287,7 +288,67 @@ a {
   border-bottom: 2px solid #efefef;
   outline: none;
   text-indent: 2px;
+  opacity: 0.7;
+  font-weight: 700;
 }
 .date__input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+.receipt__block {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 2px 14px #00000029;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.main__unsubscribe {
+  box-shadow: 0px 2px 14px #00000029;
+  width: 550px;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.unsubscribe__img {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff870e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #ff870e;
+  padding: 10px;
+}
+.subscription__btn {
+  width: 309px;
+  height: 49px;
+
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 93px;
+  background: transparent linear-gradient(113deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  color: #fff;
+  font-weight: 700;
+}
+
+.termination__btn {
+  color: #e85d73;
+  font-weight: 700;
+  margin: 32px 0;
+}
+.confirmer__btn {
+  width: 229px;
+  height: 49px;
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 93px;
+  background: transparent linear-gradient(113deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  margin: 30px auto;
 }
