@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import Modal from 'components/modal';
+import Link from 'next/link';
 import CagnotteModal from 'components/cagnotteModal';
 
 const UpdateAmount: FC = () => {
@@ -12,11 +13,7 @@ const UpdateAmount: FC = () => {
         <h1 className="font-bold text-3xl mb-4">Modifier le montant mensuel</h1>
         <span className="text-base">Le nouveau montant de votre cagnotte sera de :</span>
         <div className="flex justify-center items-center mt-4">
-          <button
-            disabled={value <= 0}
-            onClick={() => setValue(value - 10)}
-            className="circle__btn"
-          >
+          <button disabled={value <= 0} onClick={() => setValue(value - 5)} className="circle__btn">
             -
           </button>
           <div className="circle__btn_value">{value} Tc/mois</div>
@@ -34,6 +31,9 @@ const UpdateAmount: FC = () => {
           <button onClick={() => setValue(0)} className="button__annuler">
             ANNULER
           </button>
+          <Link href="/unsubscribe">
+            <a>Je souhaite résilier mon abonnement</a>
+          </Link>
         </div>
       </div>
       {closeModal && (
