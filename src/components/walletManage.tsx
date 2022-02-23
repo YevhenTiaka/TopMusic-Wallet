@@ -1,14 +1,17 @@
-import { createContext, FC, useEffect, useState } from 'react';
+import { FC, useState, useContext } from 'react';
 import Link from 'next/link';
 import styles from 'styles/Main.module.scss';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
 import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
+import Notification from './notification';
+import { Context } from 'pages/_app';
 
 const WalletManage: FC = () => {
   const [mensuellement, setMensuellement] = useState<Boolean>(false);
   const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
-
+  const { isShow }: any = useContext(Context);
+  const [show, setShow] = useState(false);
   const [value, setValue] = useState(0);
 
   const [activeButton, setActive] = useState({
@@ -24,6 +27,14 @@ const WalletManage: FC = () => {
     return;
   };
 
+  const handlerUpdated = () => {
+    setMensuellement(false);
+    setPonctuellement(false);
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 3000);
+  };
   return (
     <>
       <article className={styles.main__container_left}>
@@ -145,18 +156,27 @@ const WalletManage: FC = () => {
       </article>
       {mensuellement && (
         <Modal closeHandler={setMensuellement}>
-          <RechargeModal closeHandler={setMensuellement} value={value}>
+          <RechargeModal
+            handlerUpdated={handlerUpdated}
+            closeHandler={setMensuellement}
+            value={value}
+          >
             mensuellement
           </RechargeModal>
         </Modal>
       )}
       {ponctuellement && (
         <Modal closeHandler={setPonctuellement}>
-          <RechargeModal closeHandler={setPonctuellement} value={value}>
+          <RechargeModal
+            handlerUpdated={handlerUpdated}
+            closeHandler={setPonctuellement}
+            value={value}
+          >
             ponctuellement
           </RechargeModal>
         </Modal>
       )}
+      {(show || isShow) && <Notification>Vos données ont été mises à jour.</Notification>}
     </>
   );
 };
