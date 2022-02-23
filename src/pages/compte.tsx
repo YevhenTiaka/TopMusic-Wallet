@@ -1,9 +1,9 @@
 import Personal from 'components/personal';
-import { FC } from 'react';
+import { FC, useState } from 'react';
+import Link from 'next/link';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
-import Notification from 'components/notification';
 
 const Compte: FC = () => {
   return (
@@ -13,7 +13,6 @@ const Compte: FC = () => {
           <Personal />
           <Modifier />
           <Abonement>
-            <Notification>Vos données ont été mises à jour.</Notification>
             <div className="flex flex-col">
               <div className="">
                 <div className="text-base">
@@ -24,7 +23,10 @@ const Compte: FC = () => {
                   artistes par vos tips.
                 </div>
               </div>
-              <span className="button__modifier">MODIFIER MON ABONNEMENT</span>
+
+              <Link href="/update-amount">
+                <a className="button__modifier">MODIFIER MON ABONNEMENT</a>
+              </Link>
             </div>
           </Abonement>
         </div>
