@@ -1,8 +1,8 @@
 import styles from 'styles/RechargeModal.module.scss';
+import { useState } from 'react';
 import { FC } from 'react';
-import Link from 'next/link';
 
-const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
+const RechargeModal: FC = ({ children, value, closeHandler, handlerUpdated }: any) => {
   return (
     <>
       <h1 className={styles.modal_title}>Résumé de ma recharge</h1>
@@ -28,7 +28,7 @@ const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
       </div>
       <span className={styles.modal_text}>Votre carte de paiement</span>
       <div className={styles.modal__card}>
-        <div className={styles.modal__card_img}></div>
+        <div className="card__img"></div>
         <ul className={styles.modal__card_list}>
           <li className={styles.modal__card_list_item}>Carte Visa terminant par 4242</li>
           <li className={styles.modal__card_list_item_exp}>Expire le 12/24</li>
@@ -40,11 +40,9 @@ const RechargeModal: FC = ({ children, value, closeHandler }: any) => {
         <u>cliquez-ici</u>.
       </span>
       <div className={styles.modal__rechargeBtns}>
-        <Link href="/cagnotte">
-          <a onClick={() => closeHandler(false)} className={styles.modal__rechargeBtns_valider}>
-            VALIDER ET PAYER
-          </a>
-        </Link>
+        <button onClick={() => handlerUpdated()} className={styles.modal__rechargeBtns_valider}>
+          VALIDER ET PAYER
+        </button>
 
         <button onClick={() => closeHandler()} className={styles.modal__rechargeBtns_annuler}>
           ANNULER
