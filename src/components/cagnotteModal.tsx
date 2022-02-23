@@ -1,8 +1,18 @@
 import styles from 'styles/RechargeModal.module.scss';
+import { FC, useContext } from 'react';
 import Link from 'next/link';
-import { FC } from 'react';
-
+import { Context } from 'pages/_app';
 const CagnotteModal: FC = ({ children, value, closeHandler }: any) => {
+  const { isShow, setIsShow }: any = useContext(Context);
+
+  const handler = () => {
+    if (!isShow) {
+      setIsShow(true);
+      setTimeout(() => {
+        setIsShow(false);
+      }, 3000);
+    }
+  };
   return (
     <>
       <h1 className={styles.modal_title}>Mise à jour de votre cagnotte</h1>
@@ -26,7 +36,7 @@ const CagnotteModal: FC = ({ children, value, closeHandler }: any) => {
       </div>
       <span className={styles.modal_text}>Votre carte de paiement</span>
       <div className={styles.modal__card}>
-        <div className={styles.modal__card_img}></div>
+        <div className="card__img"></div>
         <ul className={styles.modal__card_list}>
           <li className={styles.modal__card_list_item}>Carte Visa terminant par 4242</li>
           <li className={styles.modal__card_list_item_exp}>Expire le 12/24</li>
@@ -43,7 +53,9 @@ const CagnotteModal: FC = ({ children, value, closeHandler }: any) => {
       </span>
       <div className={styles.modal__rechargeBtns}>
         <Link href="/cagnotte">
-          <a className={styles.modal__rechargeBtns_valider}>VALIDER ET PAYER</a>
+          <a onClick={handler} className={styles.modal__rechargeBtns_valider}>
+            VALIDER ET PAYER
+          </a>
         </Link>
 
         <button onClick={() => closeHandler(false)} className={styles.modal__rechargeBtns_annuler}>
