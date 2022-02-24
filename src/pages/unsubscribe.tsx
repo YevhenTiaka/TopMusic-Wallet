@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import Modal from 'components/modal';
+import Link from 'next/link';
 const Unsubscribe: FC = () => {
   const [closeModal, setCloseModal] = useState<Boolean>(false);
 
@@ -61,7 +62,10 @@ const Unsubscribe: FC = () => {
               placeholder="Tapez votre message..."
             ></textarea>
           </div>
-          <button className="confirmer__btn">CONFIRMER</button>
+
+          <Link href="/wallet-disactivated">
+            <a className="confirmer__btn">CONFIRMER</a>
+          </Link>
         </Modal>
       )}
     </>
