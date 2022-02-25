@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
+import UpdateNotification from 'components/updateNotification';
 
 const Compte: FC = () => {
   return (
@@ -30,7 +31,7 @@ const Compte: FC = () => {
             </div>
           </Abonement>
         </div>
-        <WalletAmount />
+        <WalletAmount>Renouvellé le 14 octobre</WalletAmount>
       </section>
     </>
   );
