@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
-import UpdateNotification from 'components/updateNotification';
 
 const Compte: FC = () => {
   return (
