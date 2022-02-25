@@ -7,7 +7,7 @@ import ModifierPaiement from './modifierPaiement';
 
 const Modifier: FC = () => {
   const [modal, setModal] = useState<Boolean>(false);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState<Boolean>(false);
 
   const handleUpdated = () => {
     setModal(false);
