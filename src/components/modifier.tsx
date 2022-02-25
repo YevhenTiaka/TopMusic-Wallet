@@ -18,9 +18,9 @@ const Modifier: FC = () => {
   return (
     <>
       <div className="modifier">
-        <div className="flex mt-10 justify-between ">
+        <div className="flex mt-8 justify-between">
           <ModifierPasse handleUpdated={handleUpdated} />
-          {/* <ModifierPaiement setModal={setModal}>
+          <ModifierPaiement setModal={setModal}>
             {
               <>
                 <span
@@ -35,14 +35,14 @@ const Modifier: FC = () => {
                 </div>
               </>
             }
-          </ModifierPaiement> */}
-          <ModifierPaiement setModal={setModal}>
-            {
-              <>
-                <button className="update__btn">METTRE À JOUR</button>
-              </>
-            }
           </ModifierPaiement>
+          {/* <ModifierPaiement setModal={setModal}>
+              {
+                <>
+                  <button className="update__btn">METTRE À JOUR</button>
+                </>
+              }
+            </ModifierPaiement> */}
         </div>
       </div>
 

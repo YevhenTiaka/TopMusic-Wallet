@@ -192,13 +192,12 @@ a {
   border-radius: 23px;
 }
 .modifier {
-  display: flex;
   height: auto;
   width: 840px;
   margin-bottom: 40px;
 }
 .modifier__passe {
-  width: 50%;
+  width: 45%;
   height: auto;
   padding: 20px;
   box-shadow: 0px 3px 14px #0000001c;
@@ -275,7 +274,7 @@ a {
     padding-box;
   color: #fff;
   font-weight: 700;
-  margin: 20px;
+  margin: 20px auto;
 }
 .card__img {
   margin-right: 16px;
@@ -417,9 +416,4 @@ a {
   font-size: 24px;
   border-radius: 50%;
   margin-right: 10px;
-}
-
-.modifier__passe_update {
-  border: 2px solid red;
-  height: auto;
 }
