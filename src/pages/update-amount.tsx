@@ -28,11 +28,11 @@ const UpdateAmount: FC = () => {
           <button onClick={() => setCloseModal(true)} className="button__valider">
             VALIDER
           </button>
-          <button onClick={() => setValue(0)} className="button__annuler">
+          <button className="text-base opacity-50 mb-10" onClick={() => setValue(0)}>
             ANNULER
           </button>
           <Link href="/unsubscribe">
-            <a>Je souhaite résilier mon abonnement</a>
+            <a className="text-base opacity-50 mb-2">Je souhaite résilier mon abonnement</a>
           </Link>
         </div>
       </div>
