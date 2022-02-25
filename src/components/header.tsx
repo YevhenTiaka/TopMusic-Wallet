@@ -12,7 +12,7 @@ const Header: FC = () => {
   const [menu, setMenu] = useState<Boolean>(false);
   const [active, setActive] = useState({
     compte: false,
-    cagnotte: false
+    cagnotte: true
   });
 
   return (
