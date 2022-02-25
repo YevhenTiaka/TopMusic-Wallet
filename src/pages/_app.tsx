@@ -1,11 +1,10 @@
-import type { AppProps } from 'next/app';
 import { createContext, useState } from 'react';
 import Layout from 'components/layout';
 import 'styles/globals.css';
 
-export const Context = createContext();
+export const Context = createContext<unknown>(defaultValue);
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: any) {
   const [isShow, setIsShow] = useState<Boolean>(false);
 
   return (
