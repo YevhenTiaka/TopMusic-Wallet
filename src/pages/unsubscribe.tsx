@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import Modal from 'components/modal';
 import Link from 'next/link';
+
 const Unsubscribe: FC = () => {
   const [closeModal, setCloseModal] = useState<Boolean>(false);
 
