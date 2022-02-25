@@ -1,7 +1,7 @@
 import styles from 'styles/Main.module.scss';
 import { FC } from 'react';
 
-const WalletAmount: FC = () => {
+const WalletAmount: FC = ({ children }: any) => {
   return (
     <article className={styles.main__right_upper}>
       <div className={styles.main__section_right}>
@@ -12,7 +12,7 @@ const WalletAmount: FC = () => {
             <span className={styles.main__right_block_tc}>Tc</span>
           </div>
         </div>
-        <span className={styles.main__right_block_text_b}>Renouvellé le 14 octobre</span>
+        <span className={styles.main__right_block_text_b}>{children}</span>
       </div>
     </article>
   );
