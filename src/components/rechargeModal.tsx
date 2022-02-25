@@ -1,5 +1,4 @@
 import styles from 'styles/RechargeModal.module.scss';
-import { useState } from 'react';
 import { FC } from 'react';
 
 const RechargeModal: FC = ({ children, value, closeHandler, handlerUpdated }: any) => {
