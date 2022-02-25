@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { FC, useState } from 'react';
 import Modal from './modal';
+import ModifierPasse from './modifierPasse';
 import Notification from './notification';
+import ModifierPaiement from './modifierPaiement';
 
 const Modifier: FC = () => {
   const [modal, setModal] = useState<Boolean>(false);
@@ -18,50 +20,30 @@ const Modifier: FC = () => {
     <>
       <div className="modifier">
         <div className="flex mt-10 justify-between ">
-          <div className="modifier__passe">
-            <h1 className="font-bold mb-6 text-2xl">Modifier votre mot de passe</h1>
-
-            <div className="flex flex-col">
-              <label className="text-xs font-medium  opacity-80" htmlFor="">
-                NOUVEAU MOT DE PASSE
-              </label>
-              <input className="border-b-2 mb-4 outline-none " type="password" />
-              <label className="text-xs font-medium opacity-80" htmlFor="">
-                CONFIRMER LE NOUVEAU MOT DE PASSE
-              </label>
-              <input className="border-b-2 outline-none" type="password" />
-            </div>
-
-            <button onClick={handleUpdated} className="new__password_btn">
-              DÉFINIR UN NOUVEAU MOT DE PASSE
-            </button>
-          </div>
-          <div className="modifier__passe">
-            <h1 className="font-bold text-2xl mb-6">Moyen de paiement</h1>
-
-            <div className="flex items-center">
-              <div className="card__img"></div>
-              <ul className="paiement">
-                <li className="paiement__item_carte">Carte bancaire</li>
-                <li className="paiement__item_visa">Visa se terminant par 4242</li>
-                <li className="paiement__item_expiration">Expire le 12/21</li>
-              </ul>
-            </div>
-            <span
-              onClick={() => setModal(true)}
-              className="flex font-bold justify-end mb-4 text-sm cursor-pointer"
-            >
-              Modifier mon moyen de paiement
-            </span>
-            <div className="w-4/5">
-              Votre prochaine facture sera de <strong>15€.</strong> Elle sera prélevée le{' '}
-              <strong>14/10/2021</strong>.
-            </div>
-
-            <Link href="/receipt-history">
-              <a className="paiement__historique">HISTORIQUE DE PAIEMENT</a>
-            </Link>
-          </div>
+          <ModifierPasse handleUpdated={handleUpdated} />
+          {/* <ModifierPaiement setModal={setModal}>
+            {
+              <>
+                <span
+                  onClick={() => setModal(true)}
+                  className="flex font-bold justify-end mb-4 text-sm cursor-pointer"
+                >
+                  Modifier mon moyen de paiement
+                </span>
+                <div className="w-4/5">
+                  Votre prochaine facture sera de <strong>15€.</strong> Elle sera prélevée le{' '}
+                  <strong>14/10/2021</strong>.
+                </div>
+              </>
+            }
+          </ModifierPaiement> */}
+          <ModifierPaiement setModal={setModal}>
+            {
+              <>
+                <button className="update__btn">METTRE À JOUR</button>
+              </>
+            }
+          </ModifierPaiement>
         </div>
       </div>
 
