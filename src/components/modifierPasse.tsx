@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-const ModifierPasse: FC = ({ handleUpdated }: any) => {
+const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
   return (
     <div className="modifier__passe">
       <h1 className="font-bold mb-6 text-2xl">Modifier votre mot de passe</h1>

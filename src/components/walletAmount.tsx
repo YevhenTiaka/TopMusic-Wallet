@@ -1,7 +1,7 @@
 import styles from 'styles/Main.module.scss';
 import { FC } from 'react';
 
-const WalletAmount: FC = ({ children }: any) => {
+const WalletAmount: FC<any> = ({ children }: any) => {
   return (
     <article className={styles.main__right_upper}>
       <div className={styles.main__section_right}>

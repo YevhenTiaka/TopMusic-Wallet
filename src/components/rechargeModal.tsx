@@ -1,7 +1,7 @@
 import styles from 'styles/RechargeModal.module.scss';
 import { FC } from 'react';
 
-const RechargeModal: FC = ({ children, value, closeHandler, handlerUpdated }: any) => {
+const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated }: any) => {
   return (
     <>
       <h1 className={styles.modal_title}>Résumé de ma recharge</h1>

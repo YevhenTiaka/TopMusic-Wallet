@@ -6,7 +6,7 @@ import 'styles/globals.css';
 export const Context = createContext();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState<Boolean>(false);
 
   return (
     <>
@@ -20,3 +20,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
+function defaultValue(defaultValue: any) {
+  throw new Error('Function not implemented.');
+}

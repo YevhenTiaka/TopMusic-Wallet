@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FC, useState } from 'react';
 import Modal from './modal';
 import ModifierPasse from './modifierPasse';
