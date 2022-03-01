@@ -250,7 +250,7 @@ a {
 }
 .abonement {
   width: 840px;
-  height: auto;
+  height: 200px;
   box-shadow: 0px 2px 14px #00000029;
   padding: 25px;
   margin-bottom: 40px;
@@ -416,4 +416,157 @@ a {
   font-size: 29px;
   border-radius: 50%;
   margin-right: 10px;
+}
+.forgot__password {
+  margin-top: 10px;
+  color: #f27046;
+  font-size: 11px;
+  cursor: pointer;
+}
+.connecter__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 377px;
+  height: 56px;
+  margin-top: 50px;
+  color: #fff;
+  background: transparent linear-gradient(109deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 63px;
+  font-weight: 700;
+}
+.register__btn {
+  color: #f27046;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  width: 377px;
+  height: 56px;
+  font-weight: 700;
+  box-shadow: 0px 2px 14px #00000029;
+  border: 1px solid #ff870e;
+  border-radius: 113px;
+}
+.fa-facebook {
+  font-size: 28px;
+  color: #1877f2;
+  margin: 0 60px 0 25px;
+}
+.fa-google {
+  font-size: 28px;
+  margin: 0 60px 0 25px;
+
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.topchretien__login {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  font-weight: 400;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.left__bg_one {
+  position: absolute;
+
+  top: -236.013427734375px;
+  left: -518.8724365234375px;
+  width: 100%;
+  height: 1574px;
+
+  box-shadow: 0px 3px 56px #00000029;
+  background-image: url('../styles/images/LEFT-BACK.png');
+}
+.left__bg_two {
+  position: absolute;
+  top: -444.53125px;
+  left: -775.23486328125px;
+  width: 100%;
+  height: 1875px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 56px #00000029;
+  background-image: url('../styles/images/LEFT-FRONT.png');
+}
+.app__store {
+  background-image: url('./images/appstore-button.png');
+  width: 125px;
+  height: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+.google__play {
+  background-image: url('./images/playstore-button.png');
+  width: 125px;
+  height: 40px;
+  margin-left: 15px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+.connecter__link {
+  color: #f27046;
+}
+.open__cagnotte {
+  width: 840px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.open__cagnotte_block {
+  box-shadow: 0px 2px 14px #00000029;
+  width: 400px;
+  height: 460px;
+  border-radius: 5px;
+  padding: 20px;
+}
+.cagnotte__img {
+  background-image: url('./images/check-mark-button.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  color: #ff870e;
+}
+.learn__more {
+  color: #e85d73;
+  font-weight: 700;
+}
+.create__cagnotte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 309px;
+  height: 49px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background: transparent linear-gradient(112deg, #ff870e 0%, #d236d2 100%) 0% 0% no-repeat
+    padding-box;
+  box-shadow: 0px 2px 14px #00000029;
+  border-radius: 93px;
+  margin-bottom: 30px;
+}
+.recharge {
+  color: #f27046;
+  font-weight: 700;
+  margin: 20px 0;
 }
