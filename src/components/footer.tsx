@@ -9,8 +9,8 @@ const Footer: FC = () => {
   const router = useRouter();
   return (
     <>
-      {router.pathname === '/login' ? (
-        <footer className={styles.footer}>
+      {router.pathname === '/login' || router.pathname === '/register' ? (
+        <footer className="flex justify-end">
           <div className={styles.footer__date_img}>
             <Image src={footerImg} alt="footer-img" />
           </div>
