@@ -2,7 +2,7 @@ const Register = () => {
   return (
     <>
       <main className="h-screen">
-        <section className="m-auto flex flex-col items-center">
+        <section className="m-auto flex flex-col items-center mt-40">
           <h1 className="text-center font-extrabold text-5xl mb-10">Inscription</h1>
           <div className="">
             Pour une expérience plus immersive, poursuivez votre inscription <br />
