@@ -1,4 +1,4 @@
-import { Dispatch, FC, ReactElement, SetStateAction } from 'react';
+import { FC } from 'react';
 import styles from 'styles/Modal.module.scss';
 
 const Modal: FC<any> = ({ closeHandler, children }: any) => {

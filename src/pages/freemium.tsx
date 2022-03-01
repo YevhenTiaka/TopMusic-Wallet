@@ -74,3 +74,6 @@ const Freemium: FC = () => {
 };
 
 export default Freemium;
+function setCloseModal(arg0: boolean): void {
+  throw new Error('Function not implemented.');
+}
