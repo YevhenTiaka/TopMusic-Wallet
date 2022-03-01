@@ -17,7 +17,7 @@ const Header: FC = () => {
 
   return (
     <>
-      {router.pathname === '/login' ? (
+      {router.pathname === '/login' || router.pathname === '/register' ? (
         <header>
           <div className={styles.header__container}>
             <div className={styles.header__logo}>
