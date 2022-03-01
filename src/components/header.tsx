@@ -76,7 +76,7 @@ const Header: FC = () => {
                 <Link href="/compte">
                   <a
                     onClick={() => setActive({ compte: true, cagnotte: false })}
-                    // className={router.pathname === '/freemium' && `${styles.header__nav_active}`}
+                    className={styles.header__nav_active}
                   >
                     Mon compte
                   </a>
