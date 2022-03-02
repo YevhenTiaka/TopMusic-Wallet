@@ -10,8 +10,8 @@ const Freemium: FC = () => {
 
   return (
     <>
-      <section className="mt-20 h-max flex justify-center mr-10">
-        <div className="flex flex-col ml-10 ">
+      <section className="mt-20 h-max flex justify-center  mr-5 ml-5 ">
+        <div className="flex flex-col  mr-8 ">
           <Abonement>
             <div className="flex">
               <div className="">
@@ -33,9 +33,11 @@ const Freemium: FC = () => {
           </div>
         </div>
         <div>
-          <WalletAmount />
+          <WalletAmount>
+            <div className="no__cagnotte">Vous n'avez pas de cagnotte</div>
+          </WalletAmount>
           <main className="h-screen">
-            <div className="main__block">
+            <div className="main__block_freemium">
               <h1 className="font-bold text-3xl mb-4">Je crée ma cagnotte</h1>
               <span className="text-base">
                 Sur TopMusic, nous utilisons le TopCoin. La formule est simple :
@@ -61,9 +63,7 @@ const Freemium: FC = () => {
                 Soit {value / 10}€/mois
               </span>
               <div className="flex flex-col items-center">
-                <button onClick={() => setCloseModal(true)} className="create__cagnotte">
-                  JE CRÉE MA CAGNOTTE
-                </button>
+                <button className="create__cagnotte">JE CRÉE MA CAGNOTTE</button>
               </div>
             </div>
           </main>
@@ -74,6 +74,3 @@ const Freemium: FC = () => {
 };
 
 export default Freemium;
-function setCloseModal(arg0: boolean): void {
-  throw new Error('Function not implemented.');
-}

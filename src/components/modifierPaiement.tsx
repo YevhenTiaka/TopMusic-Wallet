@@ -2,7 +2,7 @@ import Link from 'next/link';
 const ModifierPaiement = ({ children }: any) => {
   return (
     <div className="modifier__passe">
-      <h1 className="font-bold text-2xl mb-6">Moyen de paiement</h1>
+      <h1 className="font-bold text-xl mb-6">Moyen de paiement</h1>
       <div className="flex items-center">
         <div className="card__img"></div>
         <ul className="paiement">

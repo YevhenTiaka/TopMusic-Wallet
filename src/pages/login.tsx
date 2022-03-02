@@ -1,7 +1,9 @@
 const Login = () => {
   return (
     <>
-      <div className="left__bg_one"></div>
+      {/* <div className="left__bg_back"></div>
+      <div className="left__bg_front"></div> */}
+
       <main className="h-screen">
         <section className="m-auto">
           <h1 className="text-center font-extrabold text-5xl mb-20">Connexion</h1>

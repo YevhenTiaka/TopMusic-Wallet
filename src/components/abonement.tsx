@@ -4,7 +4,7 @@ const Abonement: FC = ({ children }: any) => {
   return (
     <>
       <section className="abonement">
-        <div className="">
+        <div>
           <h1 className="text-xl font-bold mb-4">Mon abonnement</h1>
           {children}
         </div>

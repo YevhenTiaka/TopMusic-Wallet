@@ -14,8 +14,8 @@ const AccountDisactivated: FC = () => {
   };
   return (
     <>
-      <div className="h-max mt-10 flex justify-center">
-        <div>
+      <div className="h-max mt-10 flex mr-12 ml-12">
+        <div className="mr-6 w-3/4">
           <section className="abonement__disactive">
             <h1 className="text-xl font-bold mb-4">Mon abonnement</h1>
             <div className="flex items-center">
@@ -43,7 +43,16 @@ const AccountDisactivated: FC = () => {
         </div>
 
         <div>
-          <WalletAmount handleUpdated={handleUpdated} />
+          <WalletAmount handleUpdated={handleUpdated}>
+            {' '}
+            <div className="flex justify-between">
+              <span className="amount__text">Vous possédez dans votre cagnotte</span>
+              <div>
+                <span className="right_block_num">13</span>
+                <span className="right_block_tc">Tc</span>
+              </div>
+            </div>
+          </WalletAmount>
           <div className="votre__text">Votre abonnement s’arrêtera le 14/10</div>
         </div>
       </div>

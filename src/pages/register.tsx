@@ -1,6 +1,7 @@
 const Register = () => {
   return (
     <>
+      <div className="right__bg_front"></div>
       <main className="h-screen">
         <section className="m-auto flex flex-col items-center mt-40">
           <h1 className="text-center font-extrabold text-5xl mb-10">Inscription</h1>

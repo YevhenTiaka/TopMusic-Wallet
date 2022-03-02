@@ -4,7 +4,7 @@ const OpenCagnotte: FC = () => {
   return (
     <div className="open__cagnotte">
       <div className="open__cagnotte_block">
-        <h1 className="text-2xl font-bold mb-6">Pourquoi ouvrir une cagnotte ?</h1>
+        <h1 className="text-xl font-bold mb-6">Pourquoi ouvrir une cagnotte ?</h1>
         <div className="mb-4">
           <strong>
             {' '}
@@ -33,18 +33,20 @@ const OpenCagnotte: FC = () => {
           <div>Mode hors connexion</div>
         </div>
       </div>
-      <div className="open__cagnotte_block">
-        <h1 className="text-2xl font-bold mb-6">Comment ça fonctionne ?</h1>
-        <div className="mb-6">
-          <div className="mb-6 ">
-            Vous souscrivez à un abonnement mensuel du montant de votre choix. <strong></strong>{' '}
-            C'est le montant de votre cagnotte. (Minimum 5€).
+      <div className="h-full ml-5">
+        <div className="open__cagnotte_block">
+          <h1 className="text-xl font-bold mb-6">Comment ça fonctionne ?</h1>
+          <div className="mb-6">
+            <div className="mb-6 ">
+              Vous souscrivez à un abonnement mensuel du montant de votre choix. <strong></strong>{' '}
+              C'est le montant de votre cagnotte. (Minimum 5€).
+            </div>
+            <br /> La <strong>fonction Tip </strong> vous permet de distribuer cette cagnotte aux
+            artistes comme vous le souhaitez tout au long du mois.
           </div>
-          <br /> La <strong>fonction Tip </strong> vous permet de distribuer cette cagnotte aux
-          artistes comme vous le souhaitez tout au long du mois.
-        </div>
 
-        <a className="learn__more">EN SAVOIR PLUS</a>
+          <a className="learn__more">EN SAVOIR PLUS</a>
+        </div>
       </div>
     </div>
   );

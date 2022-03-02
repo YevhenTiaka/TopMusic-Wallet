@@ -1,5 +1,5 @@
 import Personal from 'components/personal';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
@@ -8,8 +8,8 @@ import Modifier from 'components/modifier';
 const Compte: FC = () => {
   return (
     <>
-      <section className="flex flex-row justify-center mt-20  w-3/4 m-auto ">
-        <div className="">
+      <section className="flex flex-row  mt-20 mr-10 ml-10 justify-center ">
+        <div className="mr-10">
           <Personal />
           <Modifier />
           <Abonement>
@@ -30,7 +30,17 @@ const Compte: FC = () => {
             </div>
           </Abonement>
         </div>
-        <WalletAmount>Renouvellé le 14 octobre</WalletAmount>
+        <WalletAmount>
+          {' '}
+          <div className="flex justify-between">
+            <span className="amount__text">Vous possédez dans votre cagnotte</span>
+            <div>
+              <span className="right_block_num">13</span>
+              <span className="right_block_tc">Tc</span>
+            </div>
+          </div>
+          <span className="right_block_text_b">Renouvellé le 14 octobre</span>
+        </WalletAmount>
       </section>
     </>
   );

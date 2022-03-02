@@ -3,7 +3,7 @@ import { FC } from 'react';
 const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
   return (
     <div className="modifier__passe">
-      <h1 className="font-bold mb-6 text-2xl">Modifier votre mot de passe</h1>
+      <h1 className="font-bold mb-6 text-xl">Modifier votre mot de passe</h1>
 
       <div className="flex flex-col">
         <label className="text-xs font-medium  opacity-80" htmlFor="">
@@ -15,10 +15,11 @@ const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
         </label>
         <input className="border-b-2 outline-none" type="password" />
       </div>
-
-      <button onClick={handleUpdated} className="new__password_btn">
-        DÉFINIR UN NOUVEAU MOT DE PASSE
-      </button>
+      <div className="flex w-full justify-center">
+        <button onClick={handleUpdated} className="new__password_btn">
+          DÉFINIR UN NOUVEAU MOT DE PASSE
+        </button>
+      </div>
     </div>
   );
 };

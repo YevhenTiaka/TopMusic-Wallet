@@ -1,6 +1,5 @@
 import { FC, useState, useContext } from 'react';
 import Link from 'next/link';
-import styles from 'styles/Main.module.scss';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
 import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
@@ -37,19 +36,15 @@ const WalletManage: FC = () => {
   };
   return (
     <>
-      <article className={styles.main__container_left}>
-        <h1 className={styles.main__section_title}>Gérer ma cagnotte</h1>
-        <div className={styles.main__section}>
-          <div className={styles.main__btns}>
+      <article className="shadow-2xl p-6 h-max rounded-md w-4/6">
+        <h1 className="text-2xl font-bold mb-6">Gérer ma cagnotte</h1>
+        <div className="">
+          <div className="mb-6 mt-6 flex justify-center">
             <button
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, first: true }), setValue(10))
               }
-              className={
-                activeButton.first
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
-              }
+              className={activeButton.first ? 'main__btns_item_active' : 'main__btns_item_disabled'}
             >
               10Tc
             </button>
@@ -58,9 +53,7 @@ const WalletManage: FC = () => {
                 handleClick(setActive({ ...DEFAULT_VALUE, second: true }), setValue(20))
               }
               className={
-                activeButton.second
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
+                activeButton.second ? 'main__btns_item_active' : 'main__btns_item_disabled'
               }
             >
               20Tc
@@ -69,46 +62,37 @@ const WalletManage: FC = () => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, third: true }), setValue(30))
               }
-              className={
-                activeButton.third
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
-              }
+              className={activeButton.third ? 'main__btns_item_active' : 'main__btns_item_disabled'}
             >
               30Tc
             </button>
           </div>
-          <div className={styles.main__section_btns_container}>
+          <div className="flex justify-center  mt-8">
             <button
               disabled={value <= ZERO}
               onClick={() => setValue(value - CHANGE_VALUE)}
-              className={styles.main__section_btns_container_item}
+              className="change__value_btn"
             >
               -
             </button>
-            <div className={styles.main__section_btns_container_value}>{`${value} Tc`}</div>
-            <button
-              onClick={() => setValue(value + CHANGE_VALUE)}
-              className={styles.main__section_btns_container_item}
-            >
+            <div className="container__value">{`${value} Tc`}</div>
+            <button onClick={() => setValue(value + CHANGE_VALUE)} className="change__value_btn">
               +
             </button>
           </div>
           <button
             onClick={() => setMensuellement(!mensuellement)}
-            className={styles.main__section_mounthlyRecharged}
+            className="mounthlyRecharged__btn"
           >
             RECHARGER MENSUELLEMENT
           </button>
-          <div className={styles.main__btns}>
+          <div className="mb-6 mt-6 flex justify-center">
             <button
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, fourth: true }), setValue(30))
               }
               className={
-                activeButton.fourth
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
+                activeButton.fourth ? 'main__btns_item_active' : 'main__btns_item_disabled'
               }
             >
               30Tc
@@ -117,11 +101,7 @@ const WalletManage: FC = () => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, fifth: true }), setValue(50))
               }
-              className={
-                activeButton.fifth
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
-              }
+              className={activeButton.fifth ? 'main__btns_item_active' : 'main__btns_item_disabled'}
             >
               50Tc
             </button>
@@ -129,28 +109,22 @@ const WalletManage: FC = () => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, sixth: true }), setValue(100))
               }
-              className={
-                activeButton.sixth
-                  ? `${styles.main__btns_item_active}`
-                  : `${styles.main__btns_item_disabled}`
-              }
+              className={activeButton.sixth ? 'main__btns_item_active' : 'main__btns_item_disabled'}
             >
               100Tc
             </button>
           </div>
           <button
             onClick={() => setPonctuellement(!ponctuellement)}
-            className={styles.main__section_punctuallyRecharged}
+            className="mounthlyRecharged__btn"
           >
             RECHARGER PONCTUELLEMENT
           </button>
-          <span className={styles.main__section_usageText}>
+          <span className="opacity-50 flex justify-center ">
             Utilisables jusqu'au 14 octobre 2021
           </span>
           <Link href="/update-amount">
-            <a className={styles.main__section_chargeCagnotte}>
-              MODIFIER LE MONTANT DE MA CAGNOTTE
-            </a>
+            <a className="chargeCagnotte__btn">MODIFIER LE MONTANT DE MA CAGNOTTE</a>
           </Link>
         </div>
       </article>

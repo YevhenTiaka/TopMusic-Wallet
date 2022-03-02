@@ -1,10 +1,9 @@
 import { FC } from 'react';
-import styles from 'styles/Modal.module.scss';
 
 const Modal: FC<any> = ({ closeHandler, children }: any) => {
   return (
-    <section className={styles.modal} onClick={() => closeHandler(false)}>
-      <div className={styles.modal__container} onClick={(e) => e.stopPropagation()}>
+    <section className="modal" onClick={() => closeHandler(false)}>
+      <div className="modal__container" onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
     </section>

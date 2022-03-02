@@ -1,4 +1,3 @@
-import styles from 'styles/Account.module.scss';
 import { FC, useState } from 'react';
 import Notification from './notification';
 const Personal: FC = () => {
@@ -16,20 +15,20 @@ const Personal: FC = () => {
     }, 3000);
   };
   return (
-    <div className="flex ">
+    <>
       <div className="personal">
-        <h1 className="font-bold text-xl pl-6 pt-6 pb-6">Mes informations personnelles</h1>
-        <div className="flex justify-between  ">
-          <div className=" flex flex-col ml-6 ">
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+        <h1 className="font-bold text-xl  pl-6 pb-6">Mes informations personnelles</h1>
+        <div className="flex  ">
+          <div className=" flex flex-col ml-6 w-1/2">
+            <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               PRENOM
             </label>
-            <input className="w-96 border-b-[1px] outline-none mb-5" type="text" name="" id="" />
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+            <input className=" border-b-[1px] outline-none mb-5" type="text" name="" id="" />
+            <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               NOM
             </label>
-            <input className="w-96 border-b-[1px] outline-none mb-5" type="text" name="" id="" />
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+            <input className=" border-b-[1px] outline-none mb-5 " type="text" name="" id="" />
+            <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               SEXE
             </label>
             <div>
@@ -48,29 +47,29 @@ const Personal: FC = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col pr-6 ml-6">
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+          <div className="flex flex-col pr-6 ml-6 w-1/2">
+            <label className=" opacity-50 mb-2 " htmlFor="">
               ADRESSE EMAIL
             </label>
-            <input className="w-96 border-b-[1px] outline-none mb-5" type="text" />
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+            <input className="border-b-[1px] outline-none mb-5 " type="text" />
+            <label className="opacity-50 mb-2 " htmlFor="">
               DATE DE NAISSANCE
             </label>
-            <input className={styles.account__input_date} type="date" />
-            <label className="decoration-gray-300 opacity-50 mb-2" htmlFor="">
+            <input className="account__input_date" type="date" />
+            <label className=" opacity-50 mb-2  border-t-[2px] pt-4" htmlFor="">
               PAYS DE RÉSIDENCE
             </label>
-            <input className="w-96 border-b-[1px] outline-none mb-5" type="text" />
+            <input className=" border-b-[1px]  outline-none mb-5" type="text" />
           </div>
         </div>
         <div className="flex justify-end mt-10 mb-10 mr-5">
-          <button onClick={handleUpdated} className={styles.account__registrBtn}>
+          <button onClick={handleUpdated} className="account__registrBtn">
             ENREGISTRER LES MODIFICATIONS
           </button>
         </div>
       </div>
       {show && <Notification>Votre mot de passe a été modifié avec succès.</Notification>}
-    </div>
+    </>
   );
 };
 

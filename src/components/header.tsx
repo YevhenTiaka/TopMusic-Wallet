@@ -4,7 +4,6 @@ import { FC } from 'react';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import UserMenu from './userMenu';
-import styles from 'styles/Header.module.scss';
 import topmusicLogo from 'styles/images/topmusic_logo.png';
 
 const Header: FC = () => {
@@ -19,73 +18,50 @@ const Header: FC = () => {
     <>
       {router.pathname === '/login' || router.pathname === '/register' ? (
         <header>
-          <div className={styles.header__container}>
-            <div className={styles.header__logo}>
+          <div className="h-24 mr-6 ml-6 flex justify-between items-center ">
+            <div className="w-36">
               <Link href="/">
                 <a>
-                  <Image
-                    className={styles.header__logo_img}
-                    src={topmusicLogo}
-                    alt="Topmusic-logo"
-                  />
+                  <Image className="w-36" src={topmusicLogo} alt="Topmusic-logo" />
                 </a>
               </Link>
             </div>
           </div>
         </header>
       ) : (
-        <header className={styles.header}>
-          <div className={styles.header__container}>
-            <div className={styles.header__logo}>
+        <header className="shadow-lg">
+          <div className="h-24 mr-6 ml-6 flex justify-between items-center ">
+            <div className="w-36">
               <Link href="/">
                 <a>
-                  <Image
-                    className={styles.header__logo_img}
-                    src={topmusicLogo}
-                    alt="Topmusic-logo"
-                  />
+                  <Image className="w-36" src={topmusicLogo} alt="Topmusic-logo" />
                 </a>
               </Link>
             </div>
             <ul
               className={
                 router.pathname === '/freemium'
-                  ? `${styles.header__nav_freemium}`
-                  : `${styles.header__nav}`
+                  ? 'header__nav_freemium'
+                  : 'flex justify-between list-none font-bold w-60'
               }
             >
               {router.pathname !== '/freemium' && (
-                <li
-                  className={
-                    active.cagnotte
-                      ? `${styles.header__nav_active}`
-                      : `${styles.header__nav_disabled}`
-                  }
-                >
+                <li className={active.cagnotte ? 'header__nav_active' : 'header__nav_disabled'}>
                   <Link href="/cagnotte">
                     <a onClick={() => setActive({ compte: false, cagnotte: true })}>Ma cagnotte</a>
                   </Link>
                 </li>
               )}
 
-              <li
-                className={
-                  active.compte ? `${styles.header__nav_active}` : `${styles.header__nav_disabled}`
-                }
-              >
+              <li className={active.compte ? 'header__nav_active' : 'header__nav_disabled'}>
                 <Link href="/compte">
-                  <a
-                    onClick={() => setActive({ compte: true, cagnotte: false })}
-                    // className={router.pathname === '/freemium' ? styles.header__nav_active :null}
-                  >
-                    Mon compte
-                  </a>
+                  <a onClick={() => setActive({ compte: true, cagnotte: false })}>Mon compte</a>
                 </Link>
               </li>
             </ul>
 
-            <div className={styles.header__menu}>
-              <span className={styles.header__menu_user}>Benjamin N.</span>
+            <div className="flex">
+              <span className="mr-6">Benjamin N.</span>
               <i className="fa-solid fa-angle-down" onClick={() => setMenu(!menu)} />
             </div>
           </div>

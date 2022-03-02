@@ -19,7 +19,7 @@ const LastTips: FC = () => {
           <div className="receipt__list_amount">10Tc</div>
         </div>
         <Link href="/receipt-list">
-          <a className={styles.main__right_bottom_more}>VOIR PLUS</a>
+          <a className="voir__plus">VOIR PLUS</a>
         </Link>
       </div>
     </article>
