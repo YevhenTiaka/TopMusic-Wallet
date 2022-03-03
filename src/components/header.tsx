@@ -16,7 +16,7 @@ const Header: FC = () => {
 
   return (
     <>
-      {router.pathname === '/login' || router.pathname === '/register' ? (
+      {router.pathname === '/connexion' || router.pathname === '/enregistrement' ? (
         <header>
           <div className="h-24 mr-6 ml-6 flex justify-between items-center ">
             <div className="w-36">
@@ -38,13 +38,7 @@ const Header: FC = () => {
                 </a>
               </Link>
             </div>
-            <ul
-              className={
-                router.pathname === '/freemium'
-                  ? 'header__nav_freemium'
-                  : 'flex justify-between list-none font-bold w-60'
-              }
-            >
+            <ul className="flex justify-between list-none font-bold w-60">
               {router.pathname !== '/freemium' && (
                 <li className={active.cagnotte ? 'header__nav_active' : 'header__nav_disabled'}>
                   <Link href="/cagnotte">

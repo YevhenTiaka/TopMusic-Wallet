@@ -31,7 +31,7 @@ const UpdateAmount: FC = () => {
           <button className="text-base opacity-50 mb-10" onClick={() => setValue(0)}>
             ANNULER
           </button>
-          <Link href="/unsubscribe">
+          <Link href="/se-desabonner">
             <a className="text-base opacity-50 mb-2">Je souhaite résilier mon abonnement</a>
           </Link>
         </div>

@@ -6,7 +6,7 @@ import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
 import Notification from './notification';
 import { Context } from 'pages/_app';
 
-const WalletManage: FC = () => {
+const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
   const [mensuellement, setMensuellement] = useState<Boolean>(false);
   const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
   const { isShow }: any = useContext(Context);
@@ -123,7 +123,7 @@ const WalletManage: FC = () => {
           <span className="opacity-50 flex justify-center ">
             Utilisables jusqu'au 14 octobre 2021
           </span>
-          <Link href="/update-amount">
+          <Link href="/montant-mise-a-jour">
             <a className="chargeCagnotte__btn">MODIFIER LE MONTANT DE MA CAGNOTTE</a>
           </Link>
         </div>

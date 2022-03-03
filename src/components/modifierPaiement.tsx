@@ -14,7 +14,7 @@ const ModifierPaiement = ({ children }: any) => {
 
       {children}
 
-      <Link href="/receipt-history">
+      <Link href="/historique-de-paiement">
         <a className="paiement__historique">HISTORIQUE DE PAIEMENT</a>
       </Link>
     </div>

@@ -2,7 +2,7 @@ import styles from 'styles/Main.module.scss';
 import Link from 'next/link';
 import { FC } from 'react';
 
-const LastTips: FC = () => {
+const LastTips: FC<any> = ({ setShowList }: any) => {
   return (
     <article className="lastTips__section">
       <div className="pb-8">
@@ -18,9 +18,10 @@ const LastTips: FC = () => {
 
           <div className="receipt__list_amount">10Tc</div>
         </div>
-        <Link href="/receipt-list">
-          <a className="voir__plus">VOIR PLUS</a>
-        </Link>
+
+        <a onClick={() => setShowList(true)} className="voir__plus">
+          VOIR PLUS
+        </a>
       </div>
     </article>
   );

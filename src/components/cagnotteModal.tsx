@@ -1,7 +1,7 @@
 import { FC, useContext } from 'react';
 import Link from 'next/link';
 import { Context } from 'pages/_app';
-const CagnotteModal: FC<any> = ({ children, value, closeHandler }: any) => {
+const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
   const { isShow, setIsShow }: any = useContext(Context);
 
   const handler = () => {

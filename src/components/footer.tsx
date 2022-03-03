@@ -8,7 +8,7 @@ const Footer: FC = () => {
   const router = useRouter();
   return (
     <>
-      {router.pathname === '/login' || router.pathname === '/register' ? (
+      {router.pathname === '/connexion' || router.pathname === '/enregistrement' ? (
         <footer className="flex justify-end">
           <div className="ml-6 w-24 h-24">
             <Image src={footerImg} alt="footer-img" />
