@@ -68,3 +68,59 @@ a {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+.left__bg_front {
+  position: fixed;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background-image: url('./images/L-FRONT.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.left__bg_back {
+  position: fixed;
+  left: -30px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  background-image: url('./images/L-BACK.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.right__bg_front {
+  position: fixed;
+  right: 0;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -3;
+  background-image: url('./images/R-FRONT.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.right__bg_back {
+  position: fixed;
+  right: 0;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -4;
+  background-image: url('./images/R-BACK.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}

@@ -5,6 +5,8 @@ const Login = () => {
     <>
       <div className="left__bg_back"></div>
       <div className="left__bg_front"></div>
+      <div className="right__bg_back"></div>
+      <div className="right__bg_front"></div>
 
       <main className="h-screen">
         <section className="m-auto">
