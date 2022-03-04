@@ -56,3 +56,42 @@ a {
   height: 30px;
   background-repeat: no-repeat;
 }
+
+.fa-facebook {
+  font-size: 28px;
+  color: #1877f2;
+  margin: 0 60px 0 25px;
+}
+.fa-google {
+  font-size: 28px;
+  margin: 0 60px 0 25px;
+
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.app__store {
+  background-image: url('./images/appstore-button.png');
+  width: 125px;
+  height: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+.google__play {
+  background-image: url('./images/playstore-button.png');
+  width: 125px;
+  height: 40px;
+  margin-left: 15px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
