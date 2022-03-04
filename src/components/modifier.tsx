@@ -58,7 +58,7 @@ const Modifier: FC = () => {
                 NUMÉRO
               </label>
               <div className="flex items-center border-b-[1px]">
-                <div className="w-[37px] h-[30px] bg-no-repeat bg-contain mr-4 bg-card-img "></div>
+                <div className="w-[37px] h-[30px] bg-no-repeat bg-contain mr-4 bg-[url('./images/visa_img.png')] "></div>
                 <input className="outline-none opacity-70 font-bold" type="text" maxLength={16} />
               </div>
               <div className="mt-6 flex">

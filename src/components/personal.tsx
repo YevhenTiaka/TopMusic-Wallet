@@ -31,16 +31,24 @@ const Personal: FC = () => {
             <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               SEXE
             </label>
-            <div>
+            <div className="flex ">
               <button
-                className={gender.femme === true ? 'active' : 'disabled'}
+                className={
+                  gender.femme === true
+                    ? 'bg-orange  w-[100px] h-[40px] rounded-full text-white font-bold border-[1px] mr-3'
+                    : 'border-[1px]  w-[100px] h-[40px] rounded-full text-orange font-bold mr-3'
+                }
                 onClick={() => setGender({ ...gender, femme: true, homme: false })}
               >
                 Homme
               </button>
 
               <button
-                className={gender.homme === true ? 'active' : 'disabled'}
+                className={
+                  gender.homme === true
+                    ? 'bg-orange  w-[100px] h-[40px] rounded-full text-white font-bold border-[1px] mr-3'
+                    : ' border-[1px] w-[100px] h-[40px] rounded-full text-orange font-bold mr-3'
+                }
                 onClick={() => setGender({ ...gender, femme: false, homme: true })}
               >
                 Femme
@@ -56,7 +64,7 @@ const Personal: FC = () => {
               DATE DE NAISSANCE
             </label>
             <input
-              className="outline-none indent-2 opacity-70 font-bold border-b-[1px]"
+              className="outline-none indent-1 opacity-70 font-bold border-b-[1px]"
               type="date"
             />
             <label className=" opacity-50 mb-2   pt-4" htmlFor="">

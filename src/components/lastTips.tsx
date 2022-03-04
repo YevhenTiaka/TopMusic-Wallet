@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 const LastTips: FC<any> = ({ setShowList }: any) => {
   const handleClick = () => {
