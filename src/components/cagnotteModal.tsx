@@ -31,7 +31,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
       </div>
       <span className="font-bold text-base ">Votre carte de paiement</span>
       <div className="flex items-center">
-        <div className="card__img"></div>
+        <div className="w-[37px] h-[30px] bg-no-repeat bg-contain mr-4 bg-[url('./images/visa_img.png')]"></div>
         <ul className="list-none pl-5">
           <li className="font-bold text-xl">Carte Visa terminant par 4242</li>
           <li className="text-sm opacity-50">Expire le 12/24</li>
