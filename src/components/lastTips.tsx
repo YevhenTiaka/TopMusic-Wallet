@@ -5,7 +5,7 @@ const LastTips: FC<any> = ({ setShowList }: any) => {
     <article className="h-auto w-full mt-20 rounded-md shadow-2xl ">
       <div className="pb-8">
         <h1 className="pt-6 pl-6 font-bold text-xl mb-8">Mes derniers Tips</h1>
-        <div className="flex justify-between  border-b-2  mr-6 ml-6">
+        <div className="flex justify-between  border-b-[1px]  mr-6 ml-6">
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 rounded-full mr-5 bg-slate-500 "></div>
             <ul>

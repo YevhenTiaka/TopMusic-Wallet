@@ -16,7 +16,7 @@ const Footer: FC = () => {
         </footer>
       ) : (
         <footer>
-          <div className="footer__line" />
+          <div className="w-screen h-[2px] bg-footer-line" />
           <div className="flex justify-between items-center w-full">
             <ul className="list-none flex p-0 ml-6 font-bold ">
               <li className="ml-6">

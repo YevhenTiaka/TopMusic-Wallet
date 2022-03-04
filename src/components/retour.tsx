@@ -5,7 +5,7 @@ const Retour: FC = () => {
   const router = useRouter();
 
   return (
-    <div className="retour">
+    <div className="fixed top-[145px] left-[140px] cursor-pointer opacity-50">
       <i className="fa-solid fa-arrow-left">
         <span onClick={() => router.back()} className="ml-4">
           Retour

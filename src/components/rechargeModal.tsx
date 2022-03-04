@@ -4,7 +4,7 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
   return (
     <>
       <h1 className="text-2xl text-center mb-6 font-bold">Résumé de ma recharge</h1>
-      <div className="modal__block">
+      <div className="w-full h-[170px] mb-10 bg-gradient shadow rounded-md text-white">
         <div className="flex pl-6 pt-6">
           <div>
             <div className="font-bold mb-2">Votre recharge {children}</div>
@@ -15,7 +15,7 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
               Vous serez débité de {value / 10}€ immédiatement.
             </div>
           </div>
-          <div className="text-4xl h-96">{value}Tc</div>
+          <div className="text-4xl h-96 pr-3">{value}Tc</div>
         </div>
 
         <div className="text-right mr-4 text-sm">Les {value}Tc sont utlisables jusqu'au 14/10.</div>
@@ -23,7 +23,7 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
       <span className="font-bold text-base ">Votre carte de paiement</span>
       <div className="flex items-center">
         <div className="card__img"></div>
-        <ul className=" list-none pl-5">
+        <ul className="list-none pl-5">
           <li className="font-bold text-xl">Carte Visa terminant par 4242</li>
           <li className="text-sm opacity-50">Expire le 12/24</li>
         </ul>
@@ -38,7 +38,7 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
       <div className="flex flex-col">
         <button
           onClick={() => handlerUpdated()}
-          className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white"
+          className="flex bg-gradient justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white"
         >
           VALIDER ET PAYER
         </button>

@@ -16,14 +16,14 @@ const Personal: FC = () => {
   };
   return (
     <>
-      <div className="personal">
+      <div className="shadow-2xl rounded-md p-[15px]">
         <h1 className="font-bold text-xl  pl-6 pb-6">Mes informations personnelles</h1>
-        <div className="flex  ">
+        <div className="flex">
           <div className=" flex flex-col ml-6 w-1/2">
             <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               PRENOM
             </label>
-            <input className=" border-b-[1px] outline-none mb-5" type="text" name="" id="" />
+            <input className="border-b-[1px] outline-none mb-5" type="text" name="" id="" />
             <label className="opacity-50 mb-2 w-1/5" htmlFor="">
               NOM
             </label>
@@ -55,15 +55,21 @@ const Personal: FC = () => {
             <label className="opacity-50 mb-2 " htmlFor="">
               DATE DE NAISSANCE
             </label>
-            <input className="account__input_date" type="date" />
-            <label className=" opacity-50 mb-2  border-t-[2px] pt-4" htmlFor="">
+            <input
+              className="outline-none indent-2 opacity-70 font-bold border-b-[1px]"
+              type="date"
+            />
+            <label className=" opacity-50 mb-2   pt-4" htmlFor="">
               PAYS DE RÉSIDENCE
             </label>
-            <input className=" border-b-[1px]  outline-none mb-5" type="text" />
+            <input className="border-b-[1px]  outline-none mb-5" type="text" />
           </div>
         </div>
         <div className="flex justify-end mt-10 mb-10 mr-5">
-          <button onClick={handleUpdated} className="account__registrBtn">
+          <button
+            onClick={handleUpdated}
+            className="w-[369px] h-[49px] opacity-50 text-white font-bold bg-gradient rounded-full"
+          >
             ENREGISTRER LES MODIFICATIONS
           </button>
         </div>

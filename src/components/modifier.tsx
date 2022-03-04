@@ -17,7 +17,7 @@ const Modifier: FC = () => {
   };
   return (
     <>
-      <div className="modifier">
+      <div className="h-auto mb-[40px]">
         <div className="flex mt-8 justify-between">
           <ModifierPasse handleUpdated={handleUpdated} />
           <ModifierPaiement setModal={setModal}>
@@ -57,7 +57,7 @@ const Modifier: FC = () => {
               <label className="text-xs opacity-50" htmlFor="">
                 NUMÉRO
               </label>
-              <div className="flex items-center border-b-2">
+              <div className="flex items-center border-b-[1px]">
                 <div className="card__img"></div>
                 <input className="outline-none opacity-70 font-bold" type="text" maxLength={16} />
               </div>
@@ -66,7 +66,10 @@ const Modifier: FC = () => {
                   <label className="text-xs opacity-50" htmlFor="">
                     DATE D'EXPIRATION
                   </label>
-                  <input type="date" className="date__input" />
+                  <input
+                    type="date"
+                    className=" outline-none indent-2 opacity-70 font-bold border-b-[1px] "
+                  />
                 </div>
 
                 <div className="flex flex-col ">
@@ -75,7 +78,7 @@ const Modifier: FC = () => {
                   </label>
                   <input
                     type="text"
-                    className="border-b-2 outline-none w-28 opacity-70 font-bold"
+                    className="border-b-[1px] outline-none w-28 opacity-70 font-bold"
                   />
                 </div>
               </div>
@@ -83,11 +86,16 @@ const Modifier: FC = () => {
             <div className="flex flex-col items-center">
               <button
                 onClick={handleUpdated}
-                className="flex w-60 h-20 items-center rounded-xl font-bold text-pink m-auto mt-10"
+                className="flex w-60 h-10 items-center justify-center rounded-full font-bold bg-gradient m-auto mt-10 mb-10 text-white"
               >
                 METTRE À JOUR
               </button>
-              <button onClick={() => setModal(false)}>ANNULER</button>
+              <button
+                className="opacity-50 font-normal cursor-pointer"
+                onClick={() => setModal(false)}
+              >
+                ANNULER
+              </button>
             </div>
           </section>
         </Modal>

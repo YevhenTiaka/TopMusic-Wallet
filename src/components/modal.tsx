@@ -7,7 +7,7 @@ const Modal: FC<any> = ({ closeHandler, children }: any) => {
       onClick={() => closeHandler(false)}
     >
       <div
-        className=" w-5/12 m-auto h-auto bg-white rounded-md shadow p-10"
+        className=" w-[500px] m-auto h-max bg-white rounded-md shadow p-10"
         onClick={(e) => e.stopPropagation()}
       >
         {children}

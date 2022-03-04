@@ -5,7 +5,7 @@ const Receipt: FC = () => {
   return (
     <main className="w-7/12 m-auto h-screen mt-20">
       <Retour />
-      <div className="receipt__block">
+      <div className="w-full h-auto shadow-2xl p-[25px] rounded-md">
         <h1 className="font-bold text-xl mb-4">Historique de paiements</h1>
         <div className="opacity-50">
           <div className="flex justify-between  ">

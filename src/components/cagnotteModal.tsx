@@ -14,8 +14,8 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
   };
   return (
     <>
-      <h1 className="text-2xl text-center mb-6 font-bold">Mise à jour de votre cagnotte</h1>
-      <div className="modal__block">
+      <h1 className="text-2xl  text-center mb-6 font-bold">Mise à jour de votre cagnotte</h1>
+      <div className="w-full h-[170px] mb-10 bg-gradient shadow rounded-md text-white">
         <div className="pl-6 pt-6">
           <div className="flex">
             <div className="font-bold mb-2"> Votre nouvelle cagnotte</div>
@@ -52,7 +52,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
         <Link href="/cagnotte">
           <a
             onClick={handler}
-            className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white"
+            className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white bg-gradient"
           >
             VALIDER ET PAYER
           </a>
@@ -60,7 +60,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
 
         <button
           onClick={() => closeHandler(false)}
-          className="mb-6 mt-6 cursor-pointer  opacity-50 font-normal"
+          className="mb-6 mt-6 cursor-pointer  text-gray font-normal"
         >
           ANNULER
         </button>

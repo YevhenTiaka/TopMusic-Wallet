@@ -1,21 +1,23 @@
 import Link from 'next/link';
 const ModifierPaiement = ({ children }: any) => {
   return (
-    <div className="modifier__passe">
+    <div className="w-[45%] h-auto shadow-2xl rounded-md p-5">
       <h1 className="font-bold text-xl mb-6">Moyen de paiement</h1>
       <div className="flex items-center">
         <div className="card__img"></div>
-        <ul className="paiement">
-          <li className="paiement__item_carte">Carte bancaire</li>
-          <li className="paiement__item_visa">Visa se terminant par 4242</li>
-          <li className="paiement__item_expiration">Expire le 12/21</li>
+        <ul className="mb-5">
+          <li className="font-bold text-sm text-pink">Carte bancaire</li>
+          <li className="font-bold text-sm text-gray">Visa se terminant par 4242</li>
+          <li className="text-xs text-gray">Expire le 12/21</li>
         </ul>
       </div>
 
       {children}
 
       <Link href="/historique-de-paiement">
-        <a className="paiement__historique">HISTORIQUE DE PAIEMENT</a>
+        <a className="flex justify-end text-pink font-bold cursor-pointer mt-6 mb-6">
+          HISTORIQUE DE PAIEMENT
+        </a>
       </Link>
     </div>
   );

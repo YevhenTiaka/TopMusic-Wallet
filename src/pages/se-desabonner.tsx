@@ -51,7 +51,7 @@ const Unsubscribe: FC = () => {
         </main>
       ) : (
         <main className="h-screen mt-10">
-          <div className="main__unsubscribe">
+          <div className="shadow-2xl w-[500px] h-auto rounded-md p-[25px] m-auto">
             <h1 className="text-4xl font-bold mb-6">Votre cagnotte est désactivée...</h1>
             <div className="mb-6">
               Vous avez récemment résilié votre abonnement. Vous disposez de l'abonnement premium
@@ -59,23 +59,33 @@ const Unsubscribe: FC = () => {
               pouvoir profiter de l'ensemble des fonctionnalités premium.
             </div>
             <div className="flex mb-4">
-              <div className="unsubscribe__img">X</div>
+              <div className="w-[20px] h-[20px] border-[1px] flex items-center justify-center rounded-[50%]  text-orange text-gray p-3 mr-3">
+                X
+              </div>
               <div>Soutien des artistes</div>
             </div>
             <div className="flex mb-4">
-              <div className="unsubscribe__img">X</div>
+              <div className="w-[20px] h-[20px] border-[1px] flex items-center justify-center rounded-[50%] text-orange p-3 mr-3">
+                X
+              </div>
               <div>Écoute illimitée</div>
             </div>
             <div className="flex mb-4">
-              <div className="unsubscribe__img">X</div>
+              <div className="w-[20px] h-[20px] border-[1px] flex items-center justify-center rounded-[50%] text-orange p-3 mr-3">
+                X
+              </div>
               <div>Création de playlists</div>
             </div>
             <div className="flex mb-4">
-              <div className="unsubscribe__img">X</div>
+              <div className="w-[20px] h-[20px] border-[1px] flex items-center justify-center rounded-[50%] text-orange p-3 mr-3">
+                X
+              </div>
               <div>Qualité audio supérieure</div>
             </div>
             <div className="flex">
-              <div className="unsubscribe__img">X</div>
+              <div className="w-[20px] h-[20px] border-[1px] flex items-center justify-center rounded-[50%] text-orange p-3 mr-3">
+                X
+              </div>
               <div>Mode hors connexion</div>
             </div>
             <div className="mt-4">
@@ -84,7 +94,9 @@ const Unsubscribe: FC = () => {
             </div>
             <div className="flex flex-col items-center mt-8">
               <Link href="/cagnotte">
-                <a className="subscription__btn">RÉACTIVER MA CAGNOTTE</a>
+                <a className="flex items-center justify-center w-[309px] h-[49px] mb-5 shadow  bg-gradient text-white font-bold rounded-full">
+                  RÉACTIVER MA CAGNOTTE
+                </a>
               </Link>
             </div>
           </div>
@@ -109,7 +121,9 @@ const Unsubscribe: FC = () => {
           </div>
 
           <Link href="/portefeuille-desactive">
-            <a className="confirmer__btn">CONFIRMER</a>
+            <a className="flex justify-center items-center w-[229px] h-[49px] shadow rounded-full bg-gradient font-bold text-white m-auto mt-[30px]  ">
+              CONFIRMER
+            </a>
           </Link>
         </Modal>
       )}

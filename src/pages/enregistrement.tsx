@@ -1,7 +1,6 @@
 const Register = () => {
   return (
     <>
-      <div className="right__bg_front"></div>
       <main className="h-screen">
         <section className="m-auto flex flex-col items-center mt-40">
           <h1 className="text-center font-extrabold text-5xl mb-10">Inscription</h1>
@@ -13,7 +12,7 @@ const Register = () => {
             <a className="app__store"></a>
             <a className="google__play"></a>
           </div>
-          <a className="connecter__link">
+          <a className="text-orange">
             Déjà membre TopMusic ? <u> Se connecter</u>
           </a>
         </section>

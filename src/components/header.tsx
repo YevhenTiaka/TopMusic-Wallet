@@ -40,14 +40,14 @@ const Header: FC = () => {
             </div>
             <ul className="flex justify-between list-none font-bold w-60">
               {router.pathname !== '/freemium' && (
-                <li className={active.cagnotte ? 'header__nav_active' : 'header__nav_disabled'}>
+                <li className={active.cagnotte ? 'text-orange font-bold ' : 'text-gray font-bold'}>
                   <Link href="/cagnotte">
                     <a onClick={() => setActive({ compte: false, cagnotte: true })}>Ma cagnotte</a>
                   </Link>
                 </li>
               )}
 
-              <li className={active.compte ? 'header__nav_active' : 'header__nav_disabled'}>
+              <li className={active.compte ? 'text-orange font-bold' : 'text-gray font-bold'}>
                 <Link href="/compte">
                   <a onClick={() => setActive({ compte: true, cagnotte: false })}>Mon compte</a>
                 </Link>

@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 const OpenCagnotte: FC = () => {
   return (
-    <div className="open__cagnotte">
-      <div className="open__cagnotte_block">
+    <div className="w-full flex justify-between mb-[40px] ">
+      <div className="shadow w-[350px] h-full rounded-md p-[20px] ">
         <h1 className="text-xl font-bold mb-6">Pourquoi ouvrir une cagnotte ?</h1>
         <div className="mb-4">
           <strong>
@@ -34,7 +34,7 @@ const OpenCagnotte: FC = () => {
         </div>
       </div>
       <div className="h-full ml-5">
-        <div className="open__cagnotte_block">
+        <div className="shadow w-[350px] h-full rounded-md p-[20px] ">
           <h1 className="text-xl font-bold mb-6">Comment ça fonctionne ?</h1>
           <div className="mb-6">
             <div className="mb-6 ">
@@ -45,7 +45,7 @@ const OpenCagnotte: FC = () => {
             artistes comme vous le souhaitez tout au long du mois.
           </div>
 
-          <a className="learn__more">EN SAVOIR PLUS</a>
+          <a className="font-bold text-pink">EN SAVOIR PLUS</a>
         </div>
       </div>
     </div>

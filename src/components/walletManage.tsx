@@ -39,12 +39,16 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
       <article className="shadow-2xl p-6 h-max rounded-md w-4/6">
         <h1 className="text-2xl font-bold mb-6">Gérer ma cagnotte</h1>
         <div className="">
-          <div className="mb-6 mt-6 flex justify-center">
+          <div className="mb-6 mt-6 flex justify-center ml-5">
             <button
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, first: true }), setValue(10))
               }
-              className={activeButton.first ? 'main__btns_item_active' : 'main__btns_item_disabled'}
+              className={
+                activeButton.first
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
+              }
             >
               10Tc
             </button>
@@ -53,7 +57,9 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
                 handleClick(setActive({ ...DEFAULT_VALUE, second: true }), setValue(20))
               }
               className={
-                activeButton.second ? 'main__btns_item_active' : 'main__btns_item_disabled'
+                activeButton.second
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
               }
             >
               20Tc
@@ -62,7 +68,11 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, third: true }), setValue(30))
               }
-              className={activeButton.third ? 'main__btns_item_active' : 'main__btns_item_disabled'}
+              className={
+                activeButton.third
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
+              }
             >
               30Tc
             </button>
@@ -71,12 +81,15 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
             <button
               disabled={value <= ZERO}
               onClick={() => setValue(value - CHANGE_VALUE)}
-              className="change__value_btn"
+              className="w-[38px] h-[38px] mr-5 ml-5 rounded-full cursor-pointer border-[1px] text-2xl text-gray "
             >
               -
             </button>
             <div className="w-36 h-12 bg-orange flex items-center justify-center text-white font-bold rounded-full ">{`${value} Tc`}</div>
-            <button onClick={() => setValue(value + CHANGE_VALUE)} className="change__value_btn">
+            <button
+              onClick={() => setValue(value + CHANGE_VALUE)}
+              className="w-[38px] h-[38px] mr-5 ml-5 rounded-full cursor-pointer border-[1px] text-2xl text-gray pb-[5px]"
+            >
               +
             </button>
           </div>
@@ -86,13 +99,15 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
           >
             RECHARGER MENSUELLEMENT
           </button>
-          <div className="mb-6 mt-6 flex justify-center">
+          <div className="mb-6 mt-6 flex justify-center ml-5">
             <button
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, fourth: true }), setValue(30))
               }
               className={
-                activeButton.fourth ? 'main__btns_item_active' : 'main__btns_item_disabled'
+                activeButton.fourth
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
               }
             >
               30Tc
@@ -101,7 +116,11 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, fifth: true }), setValue(50))
               }
-              className={activeButton.fifth ? 'main__btns_item_active' : 'main__btns_item_disabled'}
+              className={
+                activeButton.fifth
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
+              }
             >
               50Tc
             </button>
@@ -109,7 +128,11 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
               onClick={() =>
                 handleClick(setActive({ ...DEFAULT_VALUE, sixth: true }), setValue(100))
               }
-              className={activeButton.sixth ? 'main__btns_item_active' : 'main__btns_item_disabled'}
+              className={
+                activeButton.sixth
+                  ? 'bg-orange w-[124px] h-[46px] text-white rounded-3xl font-bold mr-5'
+                  : 'bg-white w-[124px] h-[46px] text-orange border-solid border-[1px] rounded-3xl font-bold mr-5'
+              }
             >
               100Tc
             </button>

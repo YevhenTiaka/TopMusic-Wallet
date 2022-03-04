@@ -14,7 +14,9 @@ const Cagnotte: FC = () => {
           <div>
             <UpdateNotification>
               <div className="flex items-center">
-                <div className="notification__icon">X</div>
+                <div className="flex items-center justify-center w-[45px] h-[45px] rounded-full border-2 text-[29px] mr-5 ">
+                  X
+                </div>
 
                 <div className="text-base ">
                   <strong>Votre moyen de paiement n'est pas à jour </strong>. <br /> Après le 18/12,
@@ -54,7 +56,7 @@ const Cagnotte: FC = () => {
           <Retour />
           <section className="w-6/12 m-auto h-auto shadow rounded-md pb-5">
             <h1 className="pt-6 pl-6 font-bold text-xl mb-8">Historique des Tips</h1>
-            <div className="flex justify-between  border-b-2  mr-6 ml-6">
+            <div className="flex justify-between  border-b-[1px]  mr-6 ml-6">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 rounded-full mr-5 bg-slate-500 "></div>
                 <ul>

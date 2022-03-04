@@ -10,7 +10,7 @@ import ModifierPasse from 'components/modifierPasse';
 const Compte: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   const [value, setValue] = useState<number>(100);
-  const [disactive, setDisactive] = useState(true);
+  const [disactive, setDisactive] = useState(false);
 
   const [show, setShow] = useState(false);
 
@@ -26,7 +26,7 @@ const Compte: FC = () => {
       {disactive ? (
         <div className="h-max mt-10 flex mr-12 ml-12">
           <div className="mr-6 w-3/4">
-            <section className="abonement__disactive">
+            <section className="w-full h-auto bg-gradient  shadow p-[25px] mb-20 rounded-md  text-white">
               <h1 className="text-xl font-bold mb-4">Mon abonnement</h1>
               <div className="flex items-center">
                 <div className="">
@@ -43,7 +43,7 @@ const Compte: FC = () => {
                 </div>
 
                 <Link href="/cagnotte">
-                  <a className="flex justify-center items-center text-pink bg-white cursor-pointer p-3 mb-20 w-96 h-14 text-sm shadow rounded-full">
+                  <a className="flex justify-center items-center text-pink bg-white cursor-pointer p-3 mb-20 w-96 h-14  shadow rounded-full font-bold  text-xs">
                     RÉACTIVER MA CAGNOTTE
                   </a>
                 </Link>
@@ -61,12 +61,14 @@ const Compte: FC = () => {
               <div className="flex justify-between">
                 <span className="font-bold text-3xl">Vous possédez dans votre cagnotte</span>
                 <div>
-                  <span className="right_block_num">13</span>
-                  <span className="right_block_tc">Tc</span>
+                  <span className="text-8xl text-white font-bold">13</span>
+                  <span className="text-6xl text-white font-bold">Tc</span>
                 </div>
               </div>
             </WalletAmount>
-            <div className="votre__text">Votre abonnement s’arrêtera le 14/10</div>
+            <div className="font-bold flex justify-center mt-4 text-red-600 text-xl ">
+              Votre abonnement s’arrêtera le 14/10
+            </div>
           </div>
         </div>
       ) : (
@@ -76,7 +78,7 @@ const Compte: FC = () => {
               <div className="flex flex-col  mr-8 ">
                 <Abonement>
                   <div className="flex">
-                    <div className="">
+                    <div>
                       <div className="mb-4 text-base">
                         Vous avez un <strong>Compte Gratuit sans cagnotte.</strong>
                       </div>
@@ -85,7 +87,9 @@ const Compte: FC = () => {
                         toutes les fonctionnalités et vous ne pouvez pas soutenir les artistes.
                       </div>
                     </div>
-                    <button className="button__cagnotte">OUVRIR UNE CAGNOTTE</button>
+                    <button className="w-60 h-12 text-white font-bold shadow rounded-full mr-12 ml-20 ">
+                      OUVRIR UNE CAGNOTTE
+                    </button>
                   </div>
                 </Abonement>
                 <OpenCagnotte />
@@ -96,28 +100,39 @@ const Compte: FC = () => {
               </div>
               <div>
                 <WalletAmount>
-                  <div className="no__cagnotte">Vous n'avez pas de cagnotte</div>
+                  <div className="text-white text-4xl font-bold text-right ml-auto w-60">
+                    Vous n'avez pas de cagnotte
+                  </div>
                 </WalletAmount>
                 <main className="h-screen">
-                  <div className="main__block_freemium">
+                  <div className="w-full m-auto mt-20 shadow  p-6 rounded-md">
                     <h1 className="font-bold text-3xl mb-4">Je crée ma cagnotte</h1>
                     <span className="text-base">
                       Sur TopMusic, nous utilisons le TopCoin. La formule est simple :
                     </span>
 
-                    <div className="recharge">
+                    <div className="text-base font-bold mt-5 text-orange ">
                       Pour {value / 10}€ vous rechargez votre cagnotte de {value} Tc.
+                    </div>
+
+                    <div className="mt-5">
+                      De combien voulez-vous recharger votre cagnotte mensuellement :
                     </div>
                     <div className="flex justify-center items-center mt-4">
                       <button
                         disabled={value <= 0}
                         onClick={() => setValue(value - 5)}
-                        className="circle__btn"
+                        className="w-[38px] h-[38px] border-[1px] rounded-[50%] text-gray text-4xl font-normal flex justify-center items-center"
                       >
                         -
                       </button>
-                      <div className="circle__btn_value">{value} Tc/mois</div>
-                      <button onClick={() => setValue(value + 10)} className="circle__btn">
+                      <div className="w-36 h-12 mr-5 ml-5 bg-orange flex items-center justify-center text-white font-bold rounded-full ">
+                        {value} Tc/mois
+                      </div>
+                      <button
+                        onClick={() => setValue(value + 10)}
+                        className="w-[38px] h-[38px] border-[1px] rounded-[50%] text-gray text-4xl font-normal flex justify-center items-center"
+                      >
                         +
                       </button>
                     </div>
@@ -125,7 +140,9 @@ const Compte: FC = () => {
                       Soit {value / 10}€/mois
                     </span>
                     <div className="flex flex-col items-center">
-                      <button className="create__cagnotte">JE CRÉE MA CAGNOTTE</button>
+                      <button className="w-60 h-12 font-bold text-white shadow  flex items-center justify-center  rounded-full mt-5 mb-5 text-base">
+                        JE CRÉE MA CAGNOTTE
+                      </button>
                     </div>
                   </div>
                 </main>
@@ -149,7 +166,9 @@ const Compte: FC = () => {
                     </div>
 
                     <Link href="/montant-mise-a-jour">
-                      <a className="button__modifier">MODIFIER MON ABONNEMENT</a>
+                      <a className="text-pink cursor-pointer font-bold text-base ml-auto mt-4 mb-4">
+                        MODIFIER MON ABONNEMENT
+                      </a>
                     </Link>
                   </div>
                 </Abonement>
@@ -157,13 +176,17 @@ const Compte: FC = () => {
               <WalletAmount>
                 {' '}
                 <div className="flex justify-between">
-                  <span className="amount__text">Vous possédez dans votre cagnotte</span>
+                  <span className="font-bold text-3xl text-white w-2/5 mb-4">
+                    Vous possédez dans votre cagnotte
+                  </span>
                   <div>
-                    <span className="right_block_num">13</span>
-                    <span className="right_block_tc">Tc</span>
+                    <span className="text-8xl text-white font-bold">13</span>
+                    <span className="text-6xl text-white font-bold">Tc</span>
                   </div>
                 </div>
-                <span className="right_block_text_b">Renouvellé le 14 octobre</span>
+                <span className="text-4xl font-bold text-white m-auto ml-0">
+                  Renouvellé le 14 octobre
+                </span>
               </WalletAmount>
             </section>
           )}
