@@ -1,6 +1,14 @@
 import { FC } from 'react';
 
 const LastTips: FC<any> = ({ setShowList }: any) => {
+  const handleClick = () => {
+    setShowList(true);
+    document.body.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <article className="h-auto w-full mt-20 rounded-md shadow-2xl ">
       <div className="pb-8">
@@ -18,7 +26,7 @@ const LastTips: FC<any> = ({ setShowList }: any) => {
         </div>
 
         <a
-          onClick={() => setShowList(true)}
+          onClick={handleClick}
           className="flex justify-center font-bold cursor-pointer text-pink mt-4 "
         >
           VOIR PLUS
