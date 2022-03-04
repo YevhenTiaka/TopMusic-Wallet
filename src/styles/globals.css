@@ -31,25 +31,6 @@ a {
   font-weight: 700;
 }
 
-.header__nav_freemium {
-  color: #e85d73;
-  font-weight: 700;
-}
-.menu {
-  z-index: 10;
-  position: fixed;
-  right: 20px;
-  top: 100px;
-}
-.menu__container {
-  background-color: #ffffff;
-  width: 230px;
-  list-style: none;
-  box-shadow: 0px 18px 20px #00000008;
-  border-radius: 10px;
-  padding: 10px;
-  padding-left: 30px;
-}
 .fa-angle-down {
   cursor: pointer;
 }
@@ -98,13 +79,7 @@ a {
   border-radius: 23px;
   margin-right: 15px;
 }
-.mounthlyRecharged__btn {
-  display: flex;
-  margin: 20px auto;
-  font: normal normal bold 14px/19px Sen;
-  color: #e85d73;
-  cursor: pointer;
-}
+
 .chargeCagnotte__btn {
   display: flex;
   justify-content: center;
@@ -112,19 +87,7 @@ a {
   font-weight: 700;
   margin-top: 20px;
 }
-.container__value {
-  width: 150px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ff870e;
-  border: 1px solid #ff870e;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 26px;
-  margin-right: 10px;
-}
+
 /** Main_right_upper styles  **/
 .main__right_upper {
   height: 251px;
@@ -424,13 +387,7 @@ a {
   margin-bottom: 30px;
   cursor: pointer;
 }
-.abonement {
-  width: 100%;
-  height: auto;
-  box-shadow: 0px 2px 14px #00000029;
-  padding: 25px;
-  margin-bottom: 40px;
-}
+
 .button__modifier {
   color: #e85d73;
   font-size: 16px;
@@ -659,24 +616,28 @@ a {
   opacity: 0.5;
   cursor: pointer;
 }
-.right__bg_back {
-  position: absolute;
-  background-image: url('./images/RIGHT-BACK.png');
+.left__bg_back {
+  background-image: url('./images/LEFT-BACK.png');
   background-repeat: no-repeat;
-  top: -128.20994567871094px;
-  left: 1500px;
-  width: 761px;
-  height: 1425px;
+  position: absolute;
+  top: -352.01287841796875px;
+  left: -500px;
+  width: 785px;
+  height: 1574px;
+  transform: scale(69%);
+  z-index: -3;
 }
-.right__bg_front {
+
+.left__bg_front {
   position: absolute;
-  background-image: url('./images/RIGHT-FRONT.png');
+  background-image: url('./images/LEFT-FRONT.png');
   background-repeat: no-repeat;
-  top: -431.72454833984375px;
-  left: 1547px;
-  width: 897px;
-  height: 1849px;
-  border: 1px solid grey;
+  top: -515px;
+  left: -615px;
+  width: 850px;
+  height: 1574px;
+  transform: scale(69%);
+  z-index: -2;
 }
 .app__store {
   background-image: url('./images/appstore-button.png');

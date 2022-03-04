@@ -83,7 +83,7 @@ const Unsubscribe: FC = () => {
               réactivez votre cagnotte !
             </div>
             <div className="flex flex-col items-center mt-8">
-              <Link href="/compte-desactive">
+              <Link href="/cagnotte">
                 <a className="subscription__btn">RÉACTIVER MA CAGNOTTE</a>
               </Link>
             </div>

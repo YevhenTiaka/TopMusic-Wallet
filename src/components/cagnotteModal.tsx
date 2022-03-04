@@ -37,7 +37,9 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
           <li className="text-sm opacity-50">Expire le 12/24</li>
         </ul>
       </div>
-      <button className="modal_updateBtn">METTRE À JOUR</button>
+      <button className="flex  rounded-xl font-bold text-pink ml-auto mt-6 mb-6 text-right">
+        METTRE À JOUR
+      </button>
       <span className="text-sm opacity-50">
         Lorsque vous changez le montant de votre cagnotte, vous autorisez TopMusic à vous facturer
         automatiquement tous les mois, jusqu'à annulation. Aucun remboursement partiel. Vous pouvez
@@ -48,7 +50,10 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
       </span>
       <div className="flex flex-col">
         <Link href="/cagnotte">
-          <a onClick={handler} className="modal__rechargeBtns_valider">
+          <a
+            onClick={handler}
+            className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white"
+          >
             VALIDER ET PAYER
           </a>
         </Link>

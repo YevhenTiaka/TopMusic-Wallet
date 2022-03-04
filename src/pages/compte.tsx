@@ -8,7 +8,7 @@ import OpenCagnotte from 'components/openCagnotte';
 import ModifierPasse from 'components/modifierPasse';
 
 const Compte: FC = () => {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [value, setValue] = useState<number>(100);
   const [disactive, setDisactive] = useState(true);
 
@@ -43,7 +43,9 @@ const Compte: FC = () => {
                 </div>
 
                 <Link href="/cagnotte">
-                  <a className="button__reactiver">RÉACTIVER MA CAGNOTTE</a>
+                  <a className="flex justify-center items-center text-pink bg-white cursor-pointer p-3 mb-20 w-96 h-14 text-sm shadow rounded-full">
+                    RÉACTIVER MA CAGNOTTE
+                  </a>
                 </Link>
               </div>
             </section>
@@ -57,7 +59,7 @@ const Compte: FC = () => {
             <WalletAmount handleUpdated={handleUpdated}>
               {' '}
               <div className="flex justify-between">
-                <span className="amount__text">Vous possédez dans votre cagnotte</span>
+                <span className="font-bold text-3xl">Vous possédez dans votre cagnotte</span>
                 <div>
                   <span className="right_block_num">13</span>
                   <span className="right_block_tc">Tc</span>
@@ -89,7 +91,7 @@ const Compte: FC = () => {
                 <OpenCagnotte />
                 <Personal />
                 <div className="mt-10 mb-20">
-                  <ModifierPasse />
+                  <ModifierPasse handleUpdated={() => handleUpdated} />
                 </div>
               </div>
               <div>

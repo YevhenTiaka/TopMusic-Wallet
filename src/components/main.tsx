@@ -3,7 +3,7 @@ import { FC } from 'react';
 const Main: FC = () => {
   return (
     <>
-      <main className="main"></main>
+      <main className="h-screen"></main>
     </>
   );
 };

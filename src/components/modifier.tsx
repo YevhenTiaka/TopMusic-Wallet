@@ -81,7 +81,10 @@ const Modifier: FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <button onClick={handleUpdated} className="update__btn">
+              <button
+                onClick={handleUpdated}
+                className="flex w-60 h-20 items-center rounded-xl font-bold text-pink m-auto mt-10"
+              >
                 METTRE À JOUR
               </button>
               <button onClick={() => setModal(false)}>ANNULER</button>

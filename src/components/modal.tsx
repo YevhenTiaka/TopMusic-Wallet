@@ -2,8 +2,14 @@ import { FC } from 'react';
 
 const Modal: FC<any> = ({ closeHandler, children }: any) => {
   return (
-    <section className="modal" onClick={() => closeHandler(false)}>
-      <div className="modal__container" onClick={(e) => e.stopPropagation()}>
+    <section
+      className=" w-screen h-screen fixed  flex items-center justify-center top-0 left-0 bg-neutral-300 "
+      onClick={() => closeHandler(false)}
+    >
+      <div
+        className=" w-5/12 m-auto h-auto bg-white rounded-md shadow p-10"
+        onClick={(e) => e.stopPropagation()}
+      >
         {children}
       </div>
     </section>

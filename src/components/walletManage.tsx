@@ -75,14 +75,14 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
             >
               -
             </button>
-            <div className="container__value">{`${value} Tc`}</div>
+            <div className="w-36 h-12 bg-orange flex items-center justify-center text-white font-bold rounded-full ">{`${value} Tc`}</div>
             <button onClick={() => setValue(value + CHANGE_VALUE)} className="change__value_btn">
               +
             </button>
           </div>
           <button
             onClick={() => setMensuellement(!mensuellement)}
-            className="mounthlyRecharged__btn"
+            className="flex m-auto mb-4 mt-4 text-sm font-bold cursor-pointer text-pink"
           >
             RECHARGER MENSUELLEMENT
           </button>
@@ -116,7 +116,7 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
           </div>
           <button
             onClick={() => setPonctuellement(!ponctuellement)}
-            className="mounthlyRecharged__btn"
+            className="flex m-auto mb-4 text-sm font-bold cursor-pointer text-pink"
           >
             RECHARGER PONCTUELLEMENT
           </button>
@@ -124,7 +124,9 @@ const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
             Utilisables jusqu'au 14 octobre 2021
           </span>
           <Link href="/montant-mise-a-jour">
-            <a className="chargeCagnotte__btn">MODIFIER LE MONTANT DE MA CAGNOTTE</a>
+            <a className="flex  justify-center mt-4 m-auto mb-4 text-sm font-bold cursor-pointer text-pink">
+              MODIFIER LE MONTANT DE MA CAGNOTTE
+            </a>
           </Link>
         </div>
       </article>

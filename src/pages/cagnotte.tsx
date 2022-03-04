@@ -32,13 +32,17 @@ const Cagnotte: FC = () => {
                 <WalletAmount>
                   {' '}
                   <div className="flex justify-between">
-                    <span className="amount__text">Vous possédez dans votre cagnotte</span>
+                    <span className="font-bold text-3xl text-white w-2/5 mb-4">
+                      Vous possédez dans votre cagnotte
+                    </span>
                     <div>
-                      <span className="right_block_num">13</span>
-                      <span className="right_block_tc">Tc</span>
+                      <span className="text-8xl text-white font-bold">13</span>
+                      <span className="text-6xl text-white font-bold">Tc</span>
                     </div>
                   </div>
-                  <span className="right_block_text_b">Renouvellé le 14 octobre</span>
+                  <span className="text-4xl font-bold text-white m-auto ml-0">
+                    Renouvellé le 14 octobre
+                  </span>
                 </WalletAmount>
                 <LastTips setShowList={setShowList} />
               </section>
@@ -46,42 +50,20 @@ const Cagnotte: FC = () => {
           </div>
         </main>
       ) : (
-        <main className="receipt__main">
+        <main className="h-screen mt-40">
           <Retour />
-          <section className="receipt__list_section">
+          <section className="w-6/12 m-auto h-auto shadow rounded-md pb-5">
             <h1 className="pt-6 pl-6 font-bold text-xl mb-8">Historique des Tips</h1>
-            <div className="receipt__list_block">
-              <div className="flex items-center">
-                <div className="receipt__list_img"></div>
+            <div className="flex justify-between  border-b-2  mr-6 ml-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 rounded-full mr-5 bg-slate-500 "></div>
                 <ul>
                   <li className="font-bold">Tendry</li>
                   <li className="text-base decoration-gray-300 ">Il y a 10 minutes</li>
                 </ul>
               </div>
 
-              <div className="receipt__list_amount">10Tc</div>
-            </div>
-            <div className="receipt__list_block">
-              <div className="flex items-center">
-                <div className="receipt__list_img"></div>
-                <ul>
-                  <li>Tendry</li>
-                  <li>Il y a 10 minutes</li>
-                </ul>
-              </div>
-
-              <div className="receipt__list_amount">10Tc</div>
-            </div>
-            <div className="receipt__list_block">
-              <div className="flex items-center">
-                <div className="receipt__list_img"></div>
-                <ul>
-                  <li>Tendry</li>
-                  <li>Il y a 10 minutes</li>
-                </ul>
-              </div>
-
-              <div className="flex items-center">10Tc</div>
+              <div className="flex items-center font-bold  text-red-400">10Tc</div>
             </div>
           </section>
         </main>

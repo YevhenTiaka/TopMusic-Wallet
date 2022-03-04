@@ -28,13 +28,18 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
           <li className="text-sm opacity-50">Expire le 12/24</li>
         </ul>
       </div>
-      <button className="modal_updateBtn">METTRE À JOUR</button>
+      <button className="flex  rounded-xl font-bold text-pink ml-auto mt-6 mb-6 text-right">
+        METTRE À JOUR
+      </button>
       <span className="text-sm opacity-50">
         Pour consulter les conditions générales d'utilisations et les modalités d'annulation,
         <u>cliquez-ici</u>.
       </span>
       <div className="flex flex-col">
-        <button onClick={() => handlerUpdated()} className="modal__rechargeBtns_valider">
+        <button
+          onClick={() => handlerUpdated()}
+          className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white"
+        >
           VALIDER ET PAYER
         </button>
 

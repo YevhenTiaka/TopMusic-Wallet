@@ -1,8 +1,8 @@
 const Login = () => {
   return (
     <>
-      {/* <div className="left__bg_back"></div>
-      <div className="left__bg_front"></div> */}
+      <div className="left__bg_back"></div>
+      <div className="left__bg_front"></div>
 
       <main className="h-screen">
         <section className="m-auto">
