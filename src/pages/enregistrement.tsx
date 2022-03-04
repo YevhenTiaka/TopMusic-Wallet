@@ -9,8 +9,8 @@ const Register = () => {
             <p className="indent-12"> directement depuis l’application mobile TopMusic !</p>
           </div>
           <div className="flex mt-6 mb-6">
-            <a className="app__store"></a>
-            <a className="google__play"></a>
+            <a className="bg-[url('./images/appstore-button.png')] w-[125px] h-[40px] mr-4 cursor-pointer bg-no-repeat "></a>
+            <a className="bg-[url('./images/playstore-button.png')] w-[125px] h-[40px] ml-4 cursor-pointer bg-no-repeat"></a>
           </div>
           <a className="text-orange">
             Déjà membre TopMusic ? <u> Se connecter</u>

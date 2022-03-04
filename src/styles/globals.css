@@ -46,14 +46,6 @@ a {
   margin: 0 25px;
 }
 
-.card__img {
-  margin-right: 16px;
-  background-size: contain;
-  width: 37px;
-  height: 30px;
-  background-repeat: no-repeat;
-}
-
 .fa-facebook {
   font-size: 28px;
   color: #1877f2;
@@ -75,20 +67,4 @@ a {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-.app__store {
-  background-image: url('./images/appstore-button.png');
-  width: 125px;
-  height: 40px;
-  margin-right: 15px;
-  cursor: pointer;
-  background-repeat: no-repeat;
-}
-.google__play {
-  background-image: url('./images/playstore-button.png');
-  width: 125px;
-  height: 40px;
-  margin-left: 15px;
-  cursor: pointer;
-  background-repeat: no-repeat;
 }
