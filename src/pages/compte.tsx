@@ -1,25 +1,29 @@
 import Personal from 'components/personal';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
 import OpenCagnotte from 'components/openCagnotte';
 import ModifierPasse from 'components/modifierPasse';
+import { clear } from 'console';
 
 const Compte: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   const [value, setValue] = useState<number>(100);
   const [disactive, setDisactive] = useState(false);
-
   const [show, setShow] = useState(false);
 
-  const handleUpdated = () => {
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
-  };
+  useEffect(() => {
+    const handleUpdated = () => {
+      setShow(true);
+      const intervalId = setTimeout(() => {
+        setShow(false);
+      }, 3000);
+
+      return clearInterval(intervalId);
+    };
+  }, []);
 
   return (
     <>
