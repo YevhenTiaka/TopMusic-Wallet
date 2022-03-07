@@ -25,6 +25,7 @@ const WalletManage: FC = () => {
   const handleClick = (activeButton: any, value: any) => {
     return;
   };
+
   useEffect(() => {
     const handlerUpdated = () => {
       setMensuellement(false);
@@ -33,9 +34,10 @@ const WalletManage: FC = () => {
       const intervalId = setTimeout(() => {
         setShow(false);
       }, 3000);
-      return clearInterval(intervalId);
+      return clearTimeout(intervalId);
     };
   }, []);
+
   return (
     <>
       <article className="shadow-2xl p-6 h-max rounded-md w-4/6">
