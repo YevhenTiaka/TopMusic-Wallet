@@ -1,4 +1,4 @@
-import { FC, useState, useContext } from 'react';
+import { FC, useState, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
@@ -25,15 +25,17 @@ const WalletManage: FC = () => {
   const handleClick = (activeButton: any, value: any) => {
     return;
   };
-
-  const handlerUpdated = () => {
-    setMensuellement(false);
-    setPonctuellement(false);
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
-  };
+  useEffect(() => {
+    const handlerUpdated = () => {
+      setMensuellement(false);
+      setPonctuellement(false);
+      setShow(true);
+      const intervalId = setTimeout(() => {
+        setShow(false);
+      }, 3000);
+      return clearInterval(intervalId);
+    };
+  }, []);
   return (
     <>
       <article className="shadow-2xl p-6 h-max rounded-md w-4/6">

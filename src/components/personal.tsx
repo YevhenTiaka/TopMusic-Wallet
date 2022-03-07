@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Notification from './notification';
 const Personal: FC = () => {
   const [show, setShow] = useState(false);
@@ -7,7 +7,7 @@ const Personal: FC = () => {
     femme: false,
     homme: false
   });
-
+  useEffect(() => {}, []);
   const handleUpdated = () => {
     setShow(true);
     setTimeout(() => {

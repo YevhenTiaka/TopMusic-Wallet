@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Context } from 'pages/_app';
 import PropTypes from 'prop-types';
@@ -6,14 +6,18 @@ import PropTypes from 'prop-types';
 const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
   const { isShow, setIsShow }: any = useContext(Context);
 
-  const handler = () => {
-    if (!isShow) {
-      setIsShow(true);
-      setTimeout(() => {
-        setIsShow(false);
-      }, 3000);
-    }
-  };
+  useEffect(() => {
+    const handler = () => {
+      if (!isShow) {
+        setIsShow(true);
+        const intervalId = setTimeout(() => {
+          setIsShow(false);
+        }, 3000);
+        return clearInterval(intervalId);
+      }
+    };
+  }, []);
+
   return (
     <>
       <h1 className="text-2xl  text-center mb-2 font-bold">Mise à jour de votre cagnotte</h1>
