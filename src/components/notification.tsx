@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Notification = ({ children }: any) => {
   return (
     <div className="fixed top-[130px] right-[40px] shadow rounded-md text-white w-96 h-[120px] bg-green  ">
@@ -9,4 +11,7 @@ const Notification = ({ children }: any) => {
   );
 };
 
+Notification.prototype = {
+  children: PropTypes.any
+};
 export default Notification;

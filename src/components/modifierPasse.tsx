@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import PropTypes from 'prop-types';
 
 const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
   return (
@@ -27,4 +28,7 @@ const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
   );
 };
 
+ModifierPasse.propTypes = {
+  handleUpdated: PropTypes.any
+};
 export default ModifierPasse;

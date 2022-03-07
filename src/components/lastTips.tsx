@@ -1,4 +1,5 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
+import PropTypes from 'prop-types';
 
 const LastTips: FC<any> = ({ setShowList }: any) => {
   const handleClick = () => {
@@ -34,5 +35,9 @@ const LastTips: FC<any> = ({ setShowList }: any) => {
       </div>
     </article>
   );
+};
+
+LastTips.propTypes = {
+  setShowList: PropTypes.any
 };
 export default LastTips;

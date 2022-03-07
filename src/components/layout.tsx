@@ -1,5 +1,6 @@
 import Header from './header';
 import Footer from './footer';
+import PropTypes from 'prop-types';
 
 const Layout = ({ children }: any) => {
   return (
@@ -11,4 +12,7 @@ const Layout = ({ children }: any) => {
   );
 };
 
+Layout.prototype = {
+  children: PropTypes.any
+};
 export default Layout;

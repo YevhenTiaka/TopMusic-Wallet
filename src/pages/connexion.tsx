@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import Link from 'next/link';
 
-const Login = () => {
+const Login: FC = () => {
   return (
     <>
       <div className="left__bg_back"></div>

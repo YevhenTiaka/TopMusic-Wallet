@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import PropTypes from 'prop-types';
 
 const WalletAmount: FC<any> = ({ children }: any) => {
   return (
@@ -6,5 +7,9 @@ const WalletAmount: FC<any> = ({ children }: any) => {
       <div className="flex flex-col p-6 ">{children}</div>
     </article>
   );
+};
+
+WalletAmount.propTypes = {
+  children: PropTypes.any
 };
 export default WalletAmount;

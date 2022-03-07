@@ -1,6 +1,8 @@
 import { FC, useContext } from 'react';
 import Link from 'next/link';
 import { Context } from 'pages/_app';
+import PropTypes from 'prop-types';
+
 const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
   const { isShow, setIsShow }: any = useContext(Context);
 
@@ -14,8 +16,8 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
   };
   return (
     <>
-      <h1 className="text-2xl  text-center mb-6 font-bold">Mise à jour de votre cagnotte</h1>
-      <div className="w-full h-[170px] mb-10 bg-gradient shadow rounded-md text-white">
+      <h1 className="text-2xl  text-center mb-2 font-bold">Mise à jour de votre cagnotte</h1>
+      <div className="w-full h-[170px] mb-6 bg-gradient shadow rounded-md text-white">
         <div className="pl-6 pt-6">
           <div className="flex">
             <div className="font-bold mb-2"> Votre nouvelle cagnotte</div>
@@ -37,7 +39,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
           <li className="text-sm opacity-50">Expire le 12/24</li>
         </ul>
       </div>
-      <button className="flex  rounded-xl font-bold text-pink ml-auto mt-6 mb-6 text-right">
+      <button className="flex  rounded-xl font-bold text-pink ml-auto mt-2 mb-2 text-right">
         METTRE À JOUR
       </button>
       <span className="text-sm opacity-50">
@@ -52,7 +54,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
         <Link href="/cagnotte">
           <a
             onClick={handler}
-            className="flex justify-center items-center w-80 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-10  text-white bg-gradient"
+            className="flex justify-center items-center w-60 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-5  text-white bg-gradient"
           >
             VALIDER ET PAYER
           </a>
@@ -67,6 +69,11 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
       </div>
     </>
   );
+};
+
+CagnotteModal.propTypes = {
+  value: PropTypes.number,
+  closeHandler: PropTypes.func
 };
 
 export default CagnotteModal;

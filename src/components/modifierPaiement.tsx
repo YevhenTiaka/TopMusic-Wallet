@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
+
 const ModifierPaiement = ({ children }: any) => {
   return (
     <div className="w-[45%] h-auto shadow-2xl rounded-md p-5">
@@ -21,6 +23,10 @@ const ModifierPaiement = ({ children }: any) => {
       </Link>
     </div>
   );
+};
+
+ModifierPaiement.propTypes = {
+  children: PropTypes.any
 };
 
 export default ModifierPaiement;

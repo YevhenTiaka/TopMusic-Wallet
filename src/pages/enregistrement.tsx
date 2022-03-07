@@ -1,4 +1,6 @@
-const Register = () => {
+import { FC } from 'react';
+
+const Register: FC = () => {
   return (
     <>
       <div className="left__bg_back"></div>

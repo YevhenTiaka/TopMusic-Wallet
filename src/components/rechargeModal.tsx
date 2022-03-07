@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import PropTypes from 'prop-types';
 
 const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated }: any) => {
   return (
@@ -52,6 +53,13 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
       </div>
     </>
   );
+};
+
+RechargeModal.propTypes = {
+  children: PropTypes.any,
+  value: PropTypes.number,
+  closeHandler: PropTypes.func,
+  handlerUpdated: PropTypes.func
 };
 
 export default RechargeModal;

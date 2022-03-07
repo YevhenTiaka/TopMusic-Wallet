@@ -6,7 +6,7 @@ import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
 import Notification from './notification';
 import { Context } from 'pages/_app';
 
-const WalletManage: FC<any> = ({ setCloseModal, setModal }: any) => {
+const WalletManage: FC = () => {
   const [mensuellement, setMensuellement] = useState<Boolean>(false);
   const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
   const { isShow }: any = useContext(Context);

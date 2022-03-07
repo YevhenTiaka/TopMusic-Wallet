@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import PropTypes from 'prop-types';
 
 const Abonement: FC = ({ children }: any) => {
   return (
@@ -11,6 +12,10 @@ const Abonement: FC = ({ children }: any) => {
       </section>
     </>
   );
+};
+
+Abonement.propTypes = {
+  children: PropTypes.any
 };
 
 export default Abonement;
