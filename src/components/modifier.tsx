@@ -1,19 +1,14 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import Modal from './modal';
 import ModifierPasse from './modifierPasse';
-import Notification from './notification';
 import ModifierPaiement from './modifierPaiement';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Modifier: FC = () => {
   const [modal, setModal] = useState<Boolean>(false);
-  const [show, setShow] = useState<Boolean>(false);
 
   const handleUpdated = () => {
     setModal(false);
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
   };
   return (
     <>
@@ -100,7 +95,6 @@ const Modifier: FC = () => {
           </section>
         </Modal>
       )}
-      {show && <Notification>Vos données ont été mises à jour.</Notification>}
     </>
   );
 };

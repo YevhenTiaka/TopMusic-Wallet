@@ -3,7 +3,7 @@ import { FC } from 'react';
 const OpenCagnotte: FC = () => {
   return (
     <div className="w-full flex justify-between mb-[40px] ">
-      <div className="shadow w-[350px] h-full rounded-md p-[20px] ">
+      <div className="shadow-2xl w-[350px] h-full rounded-md p-[20px] ">
         <h1 className="text-xl font-bold mb-6">Pourquoi ouvrir une cagnotte ?</h1>
         <div className="mb-4">
           <strong>
@@ -16,25 +16,25 @@ const OpenCagnotte: FC = () => {
         <div className="mt-4 mb-4 font-bold">
           Profitez de l'ensemble des fonctionnalités <br /> premium :
         </div>
-        <div className="flex mb-4">
-          <div className="cagnotte__img"></div>
+        <div className="flex mb-4 items-center">
+          <div className="bg-[url('../styles/images/check-mark-button.png')] w-[30px] h-[30px] mr-3"></div>
           <div>Écoute illimitée</div>
         </div>
         <div className="flex mb-4">
-          <div className="cagnotte__img"></div>
+          <div className="bg-[url('../styles/images/check-mark-button.png')] w-[30px] h-[30px] mr-3"></div>
           <div>Création de playlists</div>
         </div>
         <div className="flex mb-4">
-          <div className="cagnotte__img"></div>
+          <div className="bg-[url('../styles/images/check-mark-button.png')] w-[30px] h-[30px] mr-3"></div>
           <div>Qualité audio supérieure</div>
         </div>
         <div className="flex mb-8">
-          <div className="cagnotte__img"></div>
+          <div className="bg-[url('../styles/images/check-mark-button.png')] w-[30px] h-[30px] mr-3"></div>
           <div>Mode hors connexion</div>
         </div>
       </div>
       <div className="h-full ml-5">
-        <div className="shadow w-[350px] h-full rounded-md p-[20px] ">
+        <div className="shadow-2xl w-[350px] h-full rounded-md p-[20px] ">
           <h1 className="text-xl font-bold mb-6">Comment ça fonctionne ?</h1>
           <div className="mb-6">
             <div className="mb-6 ">

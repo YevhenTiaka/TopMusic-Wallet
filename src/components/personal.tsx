@@ -1,19 +1,11 @@
-import { FC, useEffect, useState } from 'react';
-import Notification from './notification';
-const Personal: FC = () => {
-  const [show, setShow] = useState(false);
+import { FC, useState } from 'react';
 
+const Personal: FC<any> = ({ handleUpdated }: any) => {
   const [gender, setGender] = useState({
     femme: false,
     homme: false
   });
-  useEffect(() => {}, []);
-  const handleUpdated = () => {
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
-  };
+
   return (
     <>
       <div className="shadow-2xl rounded-md p-[15px]">
@@ -82,7 +74,6 @@ const Personal: FC = () => {
           </button>
         </div>
       </div>
-      {show && <Notification>Votre mot de passe a été modifié avec succès.</Notification>}
     </>
   );
 };

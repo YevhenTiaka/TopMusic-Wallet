@@ -1,29 +1,21 @@
 import Personal from 'components/personal';
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import Link from 'next/link';
+import { toast, ToastContainer } from 'react-toastify';
 import Abonement from 'components/abonement';
 import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
 import OpenCagnotte from 'components/openCagnotte';
 import ModifierPasse from 'components/modifierPasse';
-import { clear } from 'console';
 
 const Compte: FC = () => {
   const [isAuth, setIsAuth] = useState(false);
   const [value, setValue] = useState<number>(100);
-  const [disactive, setDisactive] = useState(false);
-  const [show, setShow] = useState(false);
+  const [disactive, setDisactive] = useState(true);
 
-  useEffect(() => {
-    const handleUpdated = () => {
-      setShow(true);
-      const intervalId = setTimeout(() => {
-        setShow(false);
-      }, 3000);
-
-      return clearInterval(intervalId);
-    };
-  }, []);
+  const handleUpdated = () => {
+    toast(' Votre cagnotte a bien été mise à jour ');
+  };
 
   return (
     <>
@@ -53,17 +45,19 @@ const Compte: FC = () => {
                 </Link>
               </div>
             </section>
-            <Personal />
+            <Personal handleUpdated={handleUpdated} />
             <div className="mt-10 mb-20">
-              <ModifierPasse />
+              <ModifierPasse handleUpdated={handleUpdated} />
             </div>
           </div>
 
           <div>
             <WalletAmount handleUpdated={handleUpdated}>
               {' '}
-              <div className="flex justify-between">
-                <span className="font-bold text-3xl">Vous possédez dans votre cagnotte</span>
+              <div className="flex justify-between mb-10">
+                <span className="font-bold text-3xl text-white w-[50%] ">
+                  Vous possédez dans votre cagnotte
+                </span>
                 <div>
                   <span className="text-8xl text-white font-bold">13</span>
                   <span className="text-6xl text-white font-bold">Tc</span>
@@ -91,15 +85,15 @@ const Compte: FC = () => {
                         toutes les fonctionnalités et vous ne pouvez pas soutenir les artistes.
                       </div>
                     </div>
-                    <button className="w-60 h-12 text-white font-bold shadow rounded-full mr-12 ml-20 ">
+                    <button className="w-60 h-12 text-white font-bold shadow rounded-full mr-12 ml-20 bg-gradient ">
                       OUVRIR UNE CAGNOTTE
                     </button>
                   </div>
                 </Abonement>
                 <OpenCagnotte />
-                <Personal />
+                <Personal handleUpdated={handleUpdated} />
                 <div className="mt-10 mb-20">
-                  <ModifierPasse handleUpdated={() => handleUpdated} />
+                  <ModifierPasse handleUpdated={handleUpdated} />
                 </div>
               </div>
               <div>
@@ -109,7 +103,7 @@ const Compte: FC = () => {
                   </div>
                 </WalletAmount>
                 <main className="h-screen">
-                  <div className="w-full m-auto mt-20 shadow  p-6 rounded-md">
+                  <div className="w-full m-auto mt-20 shadow-2xl  p-6 rounded-md">
                     <h1 className="font-bold text-3xl mb-4">Je crée ma cagnotte</h1>
                     <span className="text-base">
                       Sur TopMusic, nous utilisons le TopCoin. La formule est simple :
@@ -144,7 +138,7 @@ const Compte: FC = () => {
                       Soit {value / 10}€/mois
                     </span>
                     <div className="flex flex-col items-center">
-                      <button className="w-60 h-12 font-bold text-white shadow  flex items-center justify-center  rounded-full mt-5 mb-5 text-base">
+                      <button className="w-60 h-12 font-bold text-white shadow  flex items-center justify-center  rounded-full mt-5 mb-5 text-base bg-gradient">
                         JE CRÉE MA CAGNOTTE
                       </button>
                     </div>
@@ -155,7 +149,7 @@ const Compte: FC = () => {
           ) : (
             <section className="flex flex-row  mt-20 mr-10 ml-10 justify-center ">
               <div className="mr-10">
-                <Personal />
+                <Personal handleUpdated={handleUpdated} />
                 <Modifier />
                 <Abonement>
                   <div className="flex flex-col">
@@ -179,8 +173,8 @@ const Compte: FC = () => {
               </div>
               <WalletAmount>
                 {' '}
-                <div className="flex justify-between">
-                  <span className="font-bold text-3xl text-white w-2/5 mb-4">
+                <div className="flex justify-between mb-[60px]">
+                  <span className="font-bold text-3xl text-white w-2/5 ">
                     Vous possédez dans votre cagnotte
                   </span>
                   <div>
@@ -196,6 +190,17 @@ const Compte: FC = () => {
           )}
         </>
       )}
+
+      <ToastContainer
+        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green'}
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+      />
     </>
   );
 };

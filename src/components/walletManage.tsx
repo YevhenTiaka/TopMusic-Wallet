@@ -1,16 +1,14 @@
-import { FC, useState, useContext, useEffect } from 'react';
+import { FC, useState } from 'react';
 import Link from 'next/link';
 import RechargeModal from './rechargeModal';
 import Modal from './modal';
 import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
-import Notification from './notification';
-import { Context } from 'pages/_app';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const WalletManage: FC = () => {
+const WalletManage: FC<any> = () => {
   const [mensuellement, setMensuellement] = useState<Boolean>(false);
   const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
-  const { isShow }: any = useContext(Context);
-  const [show, setShow] = useState(false);
   const [value, setValue] = useState(0);
 
   const [activeButton, setActive] = useState({
@@ -25,21 +23,24 @@ const WalletManage: FC = () => {
   const handleClick = (activeButton: any, value: any) => {
     return;
   };
-
-  useEffect(() => {
-    const handlerUpdated = () => {
-      setMensuellement(false);
-      setPonctuellement(false);
-      setShow(true);
-      const intervalId = setTimeout(() => {
-        setShow(false);
-      }, 3000);
-      return clearTimeout(intervalId);
-    };
-  }, []);
+  const handlerUpdated = () => {
+    setMensuellement(false);
+    setPonctuellement(false);
+    toast(' Votre cagnotte a bien été mise à jour ');
+  };
 
   return (
     <>
+      <ToastContainer
+        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green'}
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+      />
       <article className="shadow-2xl p-6 h-max rounded-md w-4/6">
         <h1 className="text-2xl font-bold mb-6">Gérer ma cagnotte</h1>
         <div className="">
@@ -179,7 +180,6 @@ const WalletManage: FC = () => {
           </RechargeModal>
         </Modal>
       )}
-      {(show || isShow) && <Notification>Vos données ont été mises à jour.</Notification>}
     </>
   );
 };

@@ -1,23 +1,8 @@
-import { FC, useContext, useEffect, useState } from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
-import { Context } from 'pages/_app';
 import PropTypes from 'prop-types';
 
 const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
-  const { isShow, setIsShow }: any = useContext(Context);
-
-  useEffect(() => {
-    const handler = () => {
-      if (!isShow) {
-        setIsShow(true);
-        const intervalId = setTimeout(() => {
-          setIsShow(false);
-        }, 3000);
-        return clearInterval(intervalId);
-      }
-    };
-  }, []);
-
   return (
     <>
       <h1 className="text-2xl  text-center mb-2 font-bold">Mise à jour de votre cagnotte</h1>
@@ -56,10 +41,7 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
       </span>
       <div className="flex flex-col">
         <Link href="/cagnotte">
-          <a
-            onClick={handler}
-            className="flex justify-center items-center w-60 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-5  text-white bg-gradient"
-          >
+          <a className="flex justify-center items-center w-60 h-12 shadow rounded-3xl font-bold cursor-pointer m-auto mt-5  text-white bg-gradient">
             VALIDER ET PAYER
           </a>
         </Link>

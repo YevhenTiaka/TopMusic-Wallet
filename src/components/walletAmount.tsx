@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const WalletAmount: FC<any> = ({ children }: any) => {
   return (
-    <article className="shadow-2xl rounded-md bg-gradient h-[50%]">
-      <div className="flex flex-col p-6 ">{children}</div>
+    <article className="shadow-2xl rounded-md bg-gradient h-[300px]">
+      <div className="flex flex-col p-6 pb-0 ">{children}</div>
     </article>
   );
 };

@@ -7,6 +7,7 @@ import UpdateNotification from 'components/updateNotification';
 
 const Cagnotte: FC = () => {
   const [showList, setShowList] = useState(false);
+
   return (
     <>
       {showList === false ? (
@@ -33,7 +34,7 @@ const Cagnotte: FC = () => {
               <section className="ml-8 w-4/6">
                 <WalletAmount>
                   {' '}
-                  <div className="flex justify-between">
+                  <div className="flex justify-between mb-[60px]">
                     <span className="font-bold text-3xl text-white w-2/5 mb-4">
                       Vous possédez dans votre cagnotte
                     </span>
