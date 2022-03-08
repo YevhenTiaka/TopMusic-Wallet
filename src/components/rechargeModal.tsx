@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface IRechargeModal {
-  children: any;
+  children: ReactNode;
   value: number;
   closeHandler: Function;
   handlerUpdated: Function;

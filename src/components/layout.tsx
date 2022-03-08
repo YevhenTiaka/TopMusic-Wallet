@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Header from './header';
 import Footer from './footer';
 interface IChildren {
-  children: any;
+  children: ReactNode;
 }
 
 const Layout: FC<IChildren> = ({ children }) => {

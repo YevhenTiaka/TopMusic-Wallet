@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface IUpdateNotification {
-  children: any;
+  children: ReactNode;
 }
 const UpdateNotification: FC<IUpdateNotification> = ({ children }) => {
   return (

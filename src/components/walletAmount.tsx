@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface IWalletAmount {
-  children: any;
+  children: ReactNode;
 }
 const WalletAmount: FC<IWalletAmount> = ({ children }) => {
   return (

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface IModifierPaiement {
-  children: any;
+  children: ReactNode;
 }
 
 const ModifierPaiement: FC<IModifierPaiement> = ({ children }) => {
