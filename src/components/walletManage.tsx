@@ -26,21 +26,11 @@ const WalletManage: FC = () => {
   const handlerUpdated = () => {
     setMensuellement(false);
     setPonctuellement(false);
-    toast(' Votre cagnotte a bien été mise à jour ');
+    toast.success(' Votre cagnotte a bien été mise à jour ');
   };
 
   return (
     <>
-      <ToastContainer
-        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green'}
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-      />
       <article className="shadow-2xl p-6 h-max rounded-md w-4/6">
         <h1 className="text-2xl font-bold mb-6">Gérer ma cagnotte</h1>
         <div className="">
@@ -180,6 +170,18 @@ const WalletManage: FC = () => {
           </RechargeModal>
         </Modal>
       )}
+      <ToastContainer
+        toastClassName={() =>
+          ' relative flex p-2  min-h-10 rounded-md  overflow-hidden bg-green cursor-pointer'
+        }
+        bodyClassName={() =>
+          'text-xl text-white font-bold block p-3 flex items-center bg-green h-auto '
+        }
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={true}
+        newestOnTop={false}
+      />
     </>
   );
 };

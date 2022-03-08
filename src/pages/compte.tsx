@@ -14,7 +14,7 @@ const Compte: FC = () => {
   const [disactive, setDisactive] = useState(false);
 
   const handleUpdated = () => {
-    toast(' ✓ Votre cagnotte a bien été mise à jour ', {});
+    toast.success(' Vos données ont été mises à jour.');
   };
 
   return (
@@ -191,14 +191,16 @@ const Compte: FC = () => {
         </>
       )}
       <ToastContainer
-        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green h-auto'}
+        toastClassName={() =>
+          ' relative flex p-2  min-h-10 rounded-md justify-between overflow-hidden bg-green cursor-pointer'
+        }
+        bodyClassName={() =>
+          'text-xl text-white font-bold block p-3 flex items-center  bg-green h-auto'
+        }
         position="top-right"
         autoClose={3000}
         hideProgressBar={true}
         newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
       />
     </>
   );
