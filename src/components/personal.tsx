@@ -1,5 +1,4 @@
 import { FC, MouseEventHandler, useState } from 'react';
-
 interface IPersonal {
   handleUpdated: MouseEventHandler;
 }
@@ -59,7 +58,7 @@ const Personal: FC<IPersonal> = ({ handleUpdated }) => {
               DATE DE NAISSANCE
             </label>
             <input
-              className="outline-none indent-1 opacity-70 font-bold border-b-[1px]"
+              className="outline-none indent-1 opacity-70 font-bold border-b-[1px] bg-white"
               type="date"
             />
             <label className=" opacity-50 mb-2   pt-4" htmlFor="">

@@ -14,7 +14,7 @@ const Modifier: FC = () => {
       <div className="h-auto mb-[40px]">
         <div className="flex mt-8 justify-between">
           <ModifierPasse handleUpdated={handleUpdated} />
-          <ModifierPaiement setModal={setModal}>
+          <ModifierPaiement>
             {
               <>
                 <span
@@ -62,7 +62,7 @@ const Modifier: FC = () => {
                   </label>
                   <input
                     type="date"
-                    className=" outline-none indent-2 opacity-70 font-bold border-b-[1px] "
+                    className=" outline-none indent-2 opacity-70 font-bold border-b-[1px] bg-white "
                   />
                 </div>
 

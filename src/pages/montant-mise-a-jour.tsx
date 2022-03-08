@@ -2,14 +2,10 @@ import { FC, useState } from 'react';
 import Modal from 'components/modal';
 import Link from 'next/link';
 import CagnotteModal from 'components/cagnotteModal';
-import { ToastContainer, toast } from 'react-toastify';
 const UpdateAmount: FC = () => {
   const [value, setValue] = useState<number>(10);
   const [closeModal, setCloseModal] = useState<Boolean>(false);
 
-  const handleUpdated = () => {
-    toast(' Votre cagnotte a bien été mise à jour ');
-  };
   return (
     <main className="h-screen">
       <div className="w-[500px] m-auto mt-[55px] shadow-2xl p-[25px] rounded-sm">
@@ -51,24 +47,9 @@ const UpdateAmount: FC = () => {
       </div>
       {closeModal && (
         <Modal closeHandler={setCloseModal}>
-          <CagnotteModal
-            handleUpdated={handleUpdated}
-            closeHandler={setCloseModal}
-            value={value}
-          ></CagnotteModal>
+          <CagnotteModal closeHandler={setCloseModal} value={value}></CagnotteModal>
         </Modal>
       )}
-
-      <ToastContainer
-        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green'}
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-      />
     </main>
   );
 };

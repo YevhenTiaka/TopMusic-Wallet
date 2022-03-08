@@ -9,12 +9,12 @@ import OpenCagnotte from 'components/openCagnotte';
 import ModifierPasse from 'components/modifierPasse';
 
 const Compte: FC = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [value, setValue] = useState<number>(100);
-  const [disactive, setDisactive] = useState(true);
+  const [disactive, setDisactive] = useState(false);
 
   const handleUpdated = () => {
-    toast(' Votre cagnotte a bien été mise à jour ');
+    toast(' ✓ Votre cagnotte a bien été mise à jour ', {});
   };
 
   return (
@@ -52,7 +52,7 @@ const Compte: FC = () => {
           </div>
 
           <div>
-            <WalletAmount handleUpdated={handleUpdated}>
+            <WalletAmount>
               {' '}
               <div className="flex justify-between mb-10">
                 <span className="font-bold text-3xl text-white w-[50%] ">
@@ -190,9 +190,8 @@ const Compte: FC = () => {
           )}
         </>
       )}
-
       <ToastContainer
-        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green'}
+        bodyClassName={() => 'text-xl text-white font-bold block p-3 bg-green h-auto'}
         position="top-right"
         autoClose={3000}
         hideProgressBar={true}
