@@ -4,7 +4,6 @@ import LastTips from 'components/lastTips';
 import { FC, useState } from 'react';
 import Retour from 'components/retour';
 import UpdateNotification from 'components/updateNotification';
-
 const Cagnotte: FC = () => {
   const [showList, setShowList] = useState(false);
 
@@ -13,7 +12,7 @@ const Cagnotte: FC = () => {
       {showList === false ? (
         <main className="flex justify-center mt-20 mr-6 ml-6 mb-20 ">
           <div>
-            <UpdateNotification>
+            {/* <UpdateNotification>
               <div className="flex items-center">
                 <div className="flex items-center justify-center w-[45px] h-[45px] rounded-full border-2 text-[29px] mr-5 ">
                   X
@@ -28,7 +27,8 @@ const Cagnotte: FC = () => {
                   METTRE À JOUR MON MOYEN DE PAIEMENT
                 </div>
               </div>
-            </UpdateNotification>
+            </UpdateNotification> */}
+
             <section className="flex justify-between ">
               <WalletManage />
               <section className="ml-8 w-4/6">

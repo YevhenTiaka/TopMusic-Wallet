@@ -172,7 +172,7 @@ const WalletManage: FC = () => {
       )}
       <ToastContainer
         toastClassName={() =>
-          ' relative flex p-2  min-h-10 rounded-md  overflow-hidden bg-green cursor-pointer'
+          ' relative flex p-2  min-h-10 rounded-md  overflow-hidden bg-green cursor-pointer mb-[20px]'
         }
         bodyClassName={() =>
           'text-xl text-white font-bold block p-3 flex items-center bg-green h-auto '
