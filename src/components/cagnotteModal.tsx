@@ -1,8 +1,12 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
-const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
+interface ICagnotteModal {
+  value: number;
+  closeHandler: Function;
+}
+
+const CagnotteModal: FC<ICagnotteModal> = ({ value, closeHandler }) => {
   return (
     <>
       <h1 className="text-2xl  text-center mb-2 font-bold">Mise à jour de votre cagnotte</h1>
@@ -55,11 +59,6 @@ const CagnotteModal: FC<any> = ({ value, closeHandler }: any) => {
       </div>
     </>
   );
-};
-
-CagnotteModal.propTypes = {
-  value: PropTypes.number,
-  closeHandler: PropTypes.func
 };
 
 export default CagnotteModal;

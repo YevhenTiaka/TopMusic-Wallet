@@ -6,7 +6,7 @@ import { DEFAULT_VALUE, ZERO, CHANGE_VALUE } from '../constants/constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const WalletManage: FC<any> = () => {
+const WalletManage: FC = () => {
   const [mensuellement, setMensuellement] = useState<Boolean>(false);
   const [ponctuellement, setPonctuellement] = useState<Boolean>(false);
   const [value, setValue] = useState(0);

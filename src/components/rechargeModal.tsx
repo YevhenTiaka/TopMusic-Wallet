@@ -1,7 +1,13 @@
 import { FC } from 'react';
-import PropTypes from 'prop-types';
 
-const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated }: any) => {
+interface IRechargeModal {
+  children: any;
+  value: number;
+  closeHandler: Function;
+  handlerUpdated: Function;
+}
+
+const RechargeModal: FC<IRechargeModal> = ({ children, value, closeHandler, handlerUpdated }) => {
   return (
     <>
       <h1 className="text-2xl text-center mb-6 font-bold">Résumé de ma recharge</h1>
@@ -53,13 +59,6 @@ const RechargeModal: FC<any> = ({ children, value, closeHandler, handlerUpdated 
       </div>
     </>
   );
-};
-
-RechargeModal.propTypes = {
-  children: PropTypes.any,
-  value: PropTypes.number,
-  closeHandler: PropTypes.func,
-  handlerUpdated: PropTypes.func
 };
 
 export default RechargeModal;

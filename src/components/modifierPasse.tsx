@@ -1,7 +1,10 @@
-import { FC } from 'react';
-import PropTypes from 'prop-types';
+import { FC, MouseEventHandler } from 'react';
 
-const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
+interface IModifierPasse {
+  handleUpdated: MouseEventHandler;
+}
+
+const ModifierPasse: FC<IModifierPasse> = ({ handleUpdated }) => {
   return (
     <div className="w-[45%] h-auto shadow-2xl rounded-md p-5">
       <h1 className="font-bold mb-6 text-xl">Modifier votre mot de passe</h1>
@@ -28,7 +31,4 @@ const ModifierPasse: FC<any> = ({ handleUpdated }: any) => {
   );
 };
 
-ModifierPasse.propTypes = {
-  handleUpdated: PropTypes.any
-};
 export default ModifierPasse;

@@ -1,8 +1,8 @@
+import { FC } from 'react';
 import Header from './header';
 import Footer from './footer';
-import PropTypes from 'prop-types';
 
-const Layout = ({ children }: any) => {
+const Layout: FC<any> = ({ children }: any) => {
   return (
     <>
       <Header />
@@ -12,7 +12,4 @@ const Layout = ({ children }: any) => {
   );
 };
 
-Layout.prototype = {
-  children: PropTypes.any
-};
 export default Layout;

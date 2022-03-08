@@ -1,6 +1,9 @@
-import { FC, useState } from 'react';
+import { FC, MouseEventHandler, useState } from 'react';
 
-const Personal: FC<any> = ({ handleUpdated }: any) => {
+interface IPersonal {
+  handleUpdated: MouseEventHandler;
+}
+const Personal: FC<IPersonal> = ({ handleUpdated }) => {
   const [gender, setGender] = useState({
     femme: false,
     homme: false

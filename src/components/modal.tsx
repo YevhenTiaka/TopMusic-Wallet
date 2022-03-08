@@ -1,7 +1,11 @@
 import { FC } from 'react';
-import PropTypes from 'prop-types';
 
-const Modal: FC<any> = ({ closeHandler, children }: any) => {
+interface IChildren {
+  children: any;
+  closeHandler: Function;
+}
+
+const Modal: FC<IChildren> = ({ closeHandler, children }) => {
   return (
     <section
       className=" w-screen h-screen fixed  flex items-center justify-center top-0 left-0 bg-neutral-300 "
@@ -17,8 +21,4 @@ const Modal: FC<any> = ({ closeHandler, children }: any) => {
   );
 };
 
-Modal.propTypes = {
-  closeHandler: PropTypes.func,
-  children: PropTypes.any
-};
 export default Modal;

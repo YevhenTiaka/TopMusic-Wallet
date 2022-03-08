@@ -1,8 +1,11 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { FC } from 'react';
 
-const ModifierPaiement: FC<any> = ({ children }: any) => {
+interface IModifierPaiement {
+  children: any;
+}
+
+const ModifierPaiement: FC<IModifierPaiement> = ({ children }) => {
   return (
     <div className="w-[45%] h-auto shadow-2xl rounded-md p-5">
       <h1 className="font-bold text-xl mb-6">Moyen de paiement</h1>
@@ -24,10 +27,6 @@ const ModifierPaiement: FC<any> = ({ children }: any) => {
       </Link>
     </div>
   );
-};
-
-ModifierPaiement.propTypes = {
-  children: PropTypes.any
 };
 
 export default ModifierPaiement;

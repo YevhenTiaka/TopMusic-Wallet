@@ -1,7 +1,10 @@
 import { FC } from 'react';
-import PropTypes from 'prop-types';
 
-const LastTips: FC<any> = ({ setShowList }: any) => {
+interface ILastTips {
+  setShowList: Function;
+}
+
+const LastTips: FC<ILastTips> = ({ setShowList }) => {
   const handleClick = () => {
     setShowList(true);
     document.body.scrollIntoView({
@@ -37,7 +40,4 @@ const LastTips: FC<any> = ({ setShowList }: any) => {
   );
 };
 
-LastTips.propTypes = {
-  setShowList: PropTypes.any
-};
 export default LastTips;

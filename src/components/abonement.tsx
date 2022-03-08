@@ -1,7 +1,10 @@
 import { FC } from 'react';
-import PropTypes from 'prop-types';
 
-const Abonement: FC = ({ children }: any) => {
+interface IChildren {
+  children: any;
+}
+
+const Abonement: FC<IChildren> = ({ children }) => {
   return (
     <>
       <section className="w-full h-auto p-6 mb-10 shadow-2xl rounded-md">
@@ -12,10 +15,6 @@ const Abonement: FC = ({ children }: any) => {
       </section>
     </>
   );
-};
-
-Abonement.propTypes = {
-  children: PropTypes.any
 };
 
 export default Abonement;

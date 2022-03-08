@@ -2,7 +2,6 @@ import { FC, useState } from 'react';
 import Modal from './modal';
 import ModifierPasse from './modifierPasse';
 import ModifierPaiement from './modifierPaiement';
-import { ToastContainer, toast } from 'react-toastify';
 
 const Modifier: FC = () => {
   const [modal, setModal] = useState<Boolean>(false);
