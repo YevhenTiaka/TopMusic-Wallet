@@ -7,7 +7,7 @@ interface IChildren {
 const Abonement: FC<IChildren> = ({ children }) => {
   return (
     <>
-      <section className="w-full h-auto p-6 mb-10 shadow-2xl rounded-md">
+      <section className="w-full h-auto p-6 mb-10 shadow-2xl rounded-md relative">
         <div>
           <h1 className="text-xl font-bold mb-4">Mon abonnement</h1>
           {children}

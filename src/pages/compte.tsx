@@ -1,5 +1,6 @@
 import Personal from 'components/personal';
 import { FC, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { toast, ToastContainer } from 'react-toastify';
 import Abonement from 'components/abonement';
@@ -7,6 +8,7 @@ import WalletAmount from 'components/walletAmount';
 import Modifier from 'components/modifier';
 import OpenCagnotte from 'components/openCagnotte';
 import ModifierPasse from 'components/modifierPasse';
+import imgBlue from '../styles/images/TopMusic-PopUp-BG-blue-01-min.png';
 
 const Compte: FC = () => {
   const [isAuth, setIsAuth] = useState(true);
@@ -75,6 +77,7 @@ const Compte: FC = () => {
             <section className="mt-20 h-max flex justify-center  mr-5 ml-5 ">
               <div className="flex flex-col  mr-8 ">
                 <Abonement>
+                  <div className="bg-[url('../styles/images/TopMusic-PopUp-BG-blue-01-min.png')] bg-contain bg-no-repeat w-[200px] h-[65px] absolute top-0 right-[-74px]"></div>
                   <div className="flex">
                     <div>
                       <div className="mb-4 text-base">
